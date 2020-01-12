@@ -1,0 +1,3 @@
+/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/CMakeFiles/finalProjectPart2.dir
+/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/CMakeFiles/edit_cache.dir
