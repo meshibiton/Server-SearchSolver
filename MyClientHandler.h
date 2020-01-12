@@ -1,0 +1,14 @@
+//
+// Created by raph on 1/13/20.
+//
+
+#ifndef FINALPROJECTPART2_MYCLIENTHANDLER_H
+#define FINALPROJECTPART2_MYCLIENTHANDLER_H
+
+
+class MyClientHandler {
+
+};
+
+
+#endif //FINALPROJECTPART2_MYCLIENTHANDLER_H
