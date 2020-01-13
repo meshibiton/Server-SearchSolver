@@ -6,9 +6,18 @@
 #define FINALPROJECTPART2_MYCLIENTHANDLER_H
 
 
+#include "Solver.h"
+
 class MyClientHandler {
+// Data members of class
+Solver solver;
+CacheManager cm;
 
-
+public:
+// Pure Virtual Function
+    virtual void solve(Problem)= 0;
+    virtual ~MyClientHandler(){}
+/* Other members */
 };
 
 

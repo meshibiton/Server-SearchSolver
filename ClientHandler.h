@@ -13,6 +13,7 @@ class ClientHandler
 public:
   // Pure Virtual Function
   virtual void handlerClient(int socket)= 0;
+  virtual ~ClientHandler();
     /* Other members */
 };
 
