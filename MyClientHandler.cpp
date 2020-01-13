@@ -27,9 +27,9 @@ void  MyClientHandler::handlerClient(int socket){
             std::cout << buffer << std::endl;
             str = buffer;
             //substr the first line mybe she isn"t completly
-            isExist = str.find("\n");
+            isExist = str.find("end");
             if(isExist != -1){
-                cutLine = str.substr(0, isExist + 1);
+                cutLine = str.substr(0, isExist);
                 //now we have full line
                 lineProblem = lineProblem + cutLine;
                 //call function we have problem to solve
@@ -39,7 +39,7 @@ void  MyClientHandler::handlerClient(int socket){
                     solution = this->solver->solve(lineProblem);
                     cm->pushSolution(lineProblem ,solution);
                 }
-
+                cout<<solution<<endl;
                 close(socket);
             } else{
                 //fill the line there are more str to add
@@ -49,9 +49,6 @@ void  MyClientHandler::handlerClient(int socket){
         }else{
            cout<<"Failed to read from socket";
         }
-
-
-
     }
 
 }

@@ -24,6 +24,7 @@ public:
     bool isExist (string);
     void pushSolution(string, string);
     string popSolution (string);
+    int hashFunc(string line);
     virtual ~FileCacheManager(){}
 /* Other members */
 
