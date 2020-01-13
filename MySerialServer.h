@@ -8,8 +8,9 @@
 using namespace server_side;
 class MySerialServer :public Server{
 public:
-    void open (int port, ClientHandler clientHandler)
+    void open (int port, ClientHandler clientHandler);
     void stop();
+    void serverSide(int port);
 };
 
 
