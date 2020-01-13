@@ -3,3 +3,9 @@
 //
 
 #include "MySerialServer.h"
+#include "Server.h"
+using namespace server_side;
+void MySerialServer::open(int port, ClientHandler clientHandler) {
+
+};
+
