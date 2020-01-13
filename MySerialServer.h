@@ -7,11 +7,7 @@
 #include "Server.h"
 
 class MySerialServer :public Server{
-private:
-    Solver solver;
-    CachManager cm;
-public:
-    virtual ~MySerialServer(){}
+
 };
 
 

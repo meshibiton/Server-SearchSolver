@@ -5,12 +5,17 @@
 #ifndef FINALPROJECTPART2_SERVER_H
 #define FINALPROJECTPART2_SERVER_H
 
-#include "ClientHandler"
-
+#include "ClientHandler.h"
+namespace server_side{
 class Server {
-    virtual void open(int port,ClientHandler clientHandler) = 0;
+public:
+    //open the server and waite for clients
+    virtual void open(int port, ClientHandler clientHandler) = 0;
+    //close the server
     virtual void stop() = 0;
+
+    virtual ~Server() {}
 };
 
-
+}
 #endif //FINALPROJECTPART2_SERVER_H
