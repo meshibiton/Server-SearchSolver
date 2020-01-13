@@ -5,12 +5,15 @@
 #ifndef FINALPROJECTPART2_SOLVER_H
 #define FINALPROJECTPART2_SOLVER_H
 
+#include <string>
 
+using namespace  std;
+template<class Problem, class Solution>
 class Solver {
 
 public:
 // Pure Virtual Function
-    virtual void solve(Problem)= 0;
+    virtual string solve(string)= 0;
     virtual ~Solver(){}
 /* Other members */
 };

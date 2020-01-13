@@ -4,7 +4,7 @@
 
 #ifndef FINALPROJECTPART2_CLIENTHANDLER_H
 #define FINALPROJECTPART2_CLIENTHANDLER_H
-
+using namespace  std;
 // An abstract class
 class ClientHandler
 {

@@ -2,7 +2,10 @@
 // Created by raph on 1/13/20.
 //
 
+#include <unistd.h>
 #include "MyClientHandler.h"
+#include "ClientHandler.h"
+
 using  namespace std;
 void  MyClientHandler::handlerClient(int socket){
 
@@ -10,7 +13,9 @@ void  MyClientHandler::handlerClient(int socket){
     string lineProblem = "";
     string cutLine;
     bool stopRead = false;
+    int isExist;
     string str;
+    string solution;
 
 
     while(!stopRead){
@@ -28,11 +33,19 @@ void  MyClientHandler::handlerClient(int socket){
                 //now we have full line
                 lineProblem = lineProblem + cutLine;
                 //call function we have problem to solve
+                if(cm->isExist(lineProblem)){
+                    solution = cm->popSolution(lineProblem);
+                }else{
+                    solution = this->solver->solve(lineProblem);
+                    cm->pushSolution(lineProblem ,solution);
+                }
 
                 close(socket);
+            } else{
+                //fill the line there are more str to add
+                lineProblem = lineProblem + str;
+                buffer[1024] = {0};
             }
-            //fill the line there are more str to add
-            lineProblem = str;
         }else{
            cout<<"Failed to read from socket";
         }

@@ -4,20 +4,21 @@
 
 #ifndef FINALPROJECTPART2_MYCLIENTHANDLER_H
 #define FINALPROJECTPART2_MYCLIENTHANDLER_H
-
+using namespace  std;
 
 #include "Solver.h"
 #include "CacheManager.h"
+#include "ClientHandler.h"
 
-class MyClientHandler {
+class MyClientHandler: ClientHandler {
 // Data members of class
 private:
-    Solver solver;
-    CacheManager cm;
+    Solver<string,string>* solver;
+    CacheManager *cm;
 
 public:
 // Pure Virtual Function
-    virtual void solve(Problem)= 0;
+    void handlerClient(int socket);
     virtual ~MyClientHandler(){}
 /* Other members */
 };

@@ -6,6 +6,8 @@
 #define FINALPROJECTPART2_SERVER_H
 
 #include "ClientHandler.h"
+using namespace  std;
+
 namespace server_side{
 class Server {
 public:
