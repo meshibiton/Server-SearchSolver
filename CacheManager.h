@@ -9,8 +9,12 @@
 class CacheManager {
 // Data members of class
 
+
 public:
 // Pure Virtual Function
+    bool isExist (string );
+    pushSolution(string, string );
+    string popSolution (string );
     virtual ~CacheManager(){}
 /* Other members */
 

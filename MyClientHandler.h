@@ -7,11 +7,13 @@
 
 
 #include "Solver.h"
+#include "CacheManager.h"
 
 class MyClientHandler {
 // Data members of class
-Solver solver;
-CacheManager cm;
+private:
+    Solver solver;
+    CacheManager cm;
 
 public:
 // Pure Virtual Function

@@ -9,6 +9,14 @@
 
 
 class FileCacheManager:public CacheManager{
+// Data members of class
+
+
+public:
+// Pure Virtual Function
+
+    virtual ~FileCacheManager(){}
+/* Other members */
 
 };
 
