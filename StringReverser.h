@@ -5,9 +5,11 @@
 #ifndef FINALPROJECTPART2_STRINGREVERSER_H
 #define FINALPROJECTPART2_STRINGREVERSER_H
 
-
-class StringReverser {
-
+#include "Solver.h"
+using namespace  std;
+class StringReverser:public Solver<string, string> {
+public:
+    string solve(string);
 };
 
 

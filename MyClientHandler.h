@@ -10,13 +10,17 @@ using namespace  std;
 #include "CacheManager.h"
 #include "ClientHandler.h"
 
-class MyClientHandler: ClientHandler {
+class MyClientHandler:public ClientHandler {
 // Data members of class
 private:
-    Solver<string,string>* solver;
-    CacheManager *cm;
+    Solver<string,string> *solver;
+    CacheManager *cacheManager;
 
 public:
+   MyClientHandler(Solver<string,string> *s, CacheManager *c) {
+       this->solver=s;
+       this->cacheManager=c;
+    }
 // Pure Virtual Function
     void handlerClient(int socket);
     virtual ~MyClientHandler(){}

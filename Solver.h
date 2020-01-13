@@ -10,7 +10,6 @@
 using namespace  std;
 template<class Problem, class Solution>
 class Solver {
-
 public:
 // Pure Virtual Function
     virtual string solve(string)= 0;

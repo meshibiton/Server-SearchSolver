@@ -11,7 +11,7 @@
 #include <unistd.h>
 
 using namespace server_side;
-void MySerialServer::open(int port, ClientHandler clientHandler) {
+void MySerialServer::open(int port, ClientHandler *clientHandler) {
 
     //----create socket-----------
     int socketfd = socket(AF_INET, SOCK_STREAM, 0);
