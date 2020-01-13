@@ -33,11 +33,11 @@ void  MyClientHandler::handlerClient(int socket){
                 //now we have full line
                 lineProblem = lineProblem + cutLine;
                 //call function we have problem to solve
-                if(cm->isExist(lineProblem)){
-                    solution = cm->popSolution(lineProblem);
+                if(this->cacheManager->isExist(lineProblem)){
+                    solution = this->cacheManager->popSolution(lineProblem);
                 }else{
                     solution = this->solver->solve(lineProblem);
-                    cm->pushSolution(lineProblem ,solution);
+                    this->cacheManager->pushSolution(lineProblem ,solution);
                 }
                 cout<<solution<<endl;
                 close(socket);
