@@ -8,7 +8,7 @@
 #include <string>
 
 using namespace  std;
-template<class Problem, class Solution>
+template<class Solution, class Problem>
 class Solver {
 public:
 // Pure Virtual Function
