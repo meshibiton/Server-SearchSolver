@@ -9,17 +9,20 @@ using namespace  std;
 #include "Solver.h"
 #include "CacheManager.h"
 #include "ClientHandler.h"
+#include <iostream>
+#include <vector>
 
 class MyClientHandler:public ClientHandler {
 // Data members of class
 private:
-    Solver<string,string> *solver;
+    Solver<string,vector<vector<double >>> *solver;
     CacheManager *cacheManager;
 
 public:
-   MyClientHandler(Solver<string,string> *s, CacheManager *c) {
-       this->solver=s;
-       this->cacheManager=c;
+   vector<vector<double >> fromStringToVec(string row);
+   MyClientHandler(Solver<string,vector<vector<double >>> *solver1, CacheManager *cacheManager1) {
+       this->solver=solver1;
+       this->cacheManager=cacheManager1;
     }
 // Pure Virtual Function
     void handlerClient(int socket);

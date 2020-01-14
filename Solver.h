@@ -12,7 +12,7 @@ template<class Solution, class Problem>
 class Solver {
 public:
 // Pure Virtual Function
-    virtual string solve(string)= 0;
+    virtual string solve(Problem)= 0;
     virtual ~Solver(){}
 /* Other members */
 };
