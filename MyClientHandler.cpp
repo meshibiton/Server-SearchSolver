@@ -24,7 +24,7 @@ void  MyClientHandler::handlerClient(int socket){
         int valread = read(socket, buffer, 1024);
         //is we can read from the socket
         if(valread && valread!=-1){
-            std::cout << buffer << std::endl;
+//            std::cout << buffer << std::endl;
             str = buffer;
             //substr the first line mybe she isn"t completly
             isExist = str.find("end");
@@ -41,6 +41,8 @@ void  MyClientHandler::handlerClient(int socket){
                 }
                 cout<<solution<<endl;
                 close(socket);
+                //out from the loop
+                stopRead = true;
             } else{
                 //fill the line there are more str to add
                 lineProblem = lineProblem + str;
@@ -52,3 +54,5 @@ void  MyClientHandler::handlerClient(int socket){
     }
 
 }
+
+

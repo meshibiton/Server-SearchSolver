@@ -11,7 +11,9 @@
 #include <unistd.h>
 
 using namespace server_side;
+
 void MySerialServer::open(int port, ClientHandler *clientHandler) {
+    cout << "how are you" << endl;
 
     //----create socket-----------
     int socketfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -29,19 +31,20 @@ void MySerialServer::open(int port, ClientHandler *clientHandler) {
 
     //   std::thread thread1(&MySerialServer::serverSide,this,port,clientHandler);
     //------create a sperate thread that will handle client-----
-    std::thread thread1(&MySerialServer::serverSide,this,socketfd,clientHandler);
+    std::thread thread1(&MySerialServer::serverSide, this, socketfd, clientHandler);
     if (thread1.joinable()) {
         thread1.join();
     }
     close(socketfd);
 }
+
 void MySerialServer::stop() {
-    this->serverStop=true;
+    this->serverStop = true;
 }
 
-void MySerialServer::serverSide(int socketfd,ClientHandler *clientHandler){
-    struct sockaddr_in address;;
-    while(!this->serverStop) {
+void MySerialServer::serverSide(int socketfd, ClientHandler *clientHandler) {
+    struct sockaddr_in address;
+    while (!this->serverStop) {
         //making socket listen to the port
         if (listen(socketfd, 1) == -1) {
             std::cout << "Error during listening command" << std::endl;
@@ -51,21 +54,32 @@ void MySerialServer::serverSide(int socketfd,ClientHandler *clientHandler){
         }
         //before doing accept we will declare the time we are gonna waite before time-out
         struct timeval tv;
-        tv.tv_sec = 120;
+        tv.tv_sec = 10;
         tv.tv_usec = 0;
         setsockopt(socketfd, SOL_SOCKET, SO_RCVTIMEO, (const char *) &tv, sizeof tv);
         //it time out occured
-        if((errno==EWOULDBLOCK)||(errno==EAGAIN)){
-           this->stop();
-        }
+
         // accepting a client
         int client_socket = accept(socketfd, (struct sockaddr *) &address,
                                    (socklen_t *) &address);
-        if (client_socket == -1) {
-            std::cerr << "Error accepting client" << std::endl;
-            return;
+        if (client_socket < 0) {
+            //in case of time out
+            if ((errno == EWOULDBLOCK) || (errno == EAGAIN)) {
+                this->stop();
+                std::cerr << "TIME OUT!!" << std::endl;
+
+                //in case of other error
+            } else {
+                if (client_socket == -1) {
+                    std::cerr << "Error accepting client" << std::endl;
+                    return;
+                }
+            }
+        } else {
+            //we will send the client to handle the client we recieved
+            clientHandler->handlerClient(client_socket);
         }
-        //we will send the client to handle the client we recieved
-        clientHandler->handlerClient(client_socket);
     }
+
 }
+

@@ -4,16 +4,15 @@
 
 // CPP code to check if a key is present
 // in an unordered_map
+#include <bits/stdc++.h>
 #include "FileCacheManager.h"
-#include <string>
-#include <iostream>
-#include <fstream>
+
 using namespace  std;
 
 bool FileCacheManager::isExist(string problem){
 
 
-    if (this->mapCachProblem.find(problem) == this->mapCachProblem.end()){
+    if (this->mapCachProblem.find(problem) ==  this->mapCachProblem.end()){
         return false;
     } else{
         return true;
@@ -21,12 +20,13 @@ bool FileCacheManager::isExist(string problem){
 }
 void FileCacheManager::pushSolution(string problem, string solution) {
     int nameFile = hashFunc(problem);
+    cout<<"kkkk"+to_string(nameFile)<<endl;
     //write to file
-    std::ofstream outfile ((nameFile)+".txt");
+    std::ofstream outfile (to_string (nameFile)+".txt");
     outfile << solution << std::endl;
     outfile.close();
     //map string problenm to file name
-    this->mapCachProblem[problem] = (nameFile)+".txt";
+    this->mapCachProblem[problem] = to_string(nameFile)+".txt";
 
 }
 string FileCacheManager::popSolution(string problem){
@@ -41,5 +41,8 @@ int FileCacheManager::hashFunc(string line){
     std::hash<std::string> hasher;
     auto hashed = hasher(line); //returns std::size_t
     std::cout << hashed << '\n';
+
+}
+FileCacheManager::~FileCacheManager(){
 
 }

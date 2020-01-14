@@ -25,8 +25,8 @@ public:
     void pushSolution(string, string);
     string popSolution (string);
     int hashFunc(string line);
-    virtual ~FileCacheManager(){}
-/* Other members */
+     ~FileCacheManager();
+    /* Other members */
 
 };
 

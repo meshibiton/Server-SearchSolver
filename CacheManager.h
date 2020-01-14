@@ -7,7 +7,6 @@
 
 #include <stdio.h>
 #include <iostream>
-#include <bits/unordered_map.h>
 #include<iterator>
 #include <unordered_map>
 
@@ -19,9 +18,9 @@ class CacheManager {
 
 public:
 // Pure Virtual Function
-    virtual bool isExist (string);
-    virtual void pushSolution(string, string);
-    virtual string popSolution (string);
+    virtual bool isExist (string) = 0;
+    virtual void pushSolution(string, string) = 0;
+    virtual string popSolution (string) = 0;
     virtual ~CacheManager(){}
 /* Other members */
 

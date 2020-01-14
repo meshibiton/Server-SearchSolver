@@ -8,7 +8,7 @@
 using namespace server_side;
 class MySerialServer :public Server{
 public:
-    void open (int port, ClientHandler *clientHandler);
+    void open (int port, ClientHandler *clientHandler) override ;
     void stop();
     void serverSide(int socketfd,ClientHandler *clientHandler);
     bool serverStop=false;

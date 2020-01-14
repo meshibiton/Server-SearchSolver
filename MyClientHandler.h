@@ -23,7 +23,10 @@ public:
     }
 // Pure Virtual Function
     void handlerClient(int socket);
-    virtual ~MyClientHandler(){}
+    ~MyClientHandler() {
+        delete (solver);
+        delete(cacheManager);
+    }
 /* Other members */
 };
 

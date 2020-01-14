@@ -3,22 +3,16 @@
 #include "MyClientHandler.h"
 #include "StringReverser.h"
 #include "FileCacheManager.h"
-namespace server_side {
-    namespace boot {
-        class Main {
-        public:
-            int main(char *args[]){
-                MySerialServer *mySerialServer;
-                StringReverser *stringReverser=new StringReverser();
-                FileCacheManager *fileCacheManager=new FileCacheManager();
-                MyClientHandler *myClientHandler=new MyClientHandler(stringReverser,fileCacheManager);
-                mySerialServer->open(atoi(args[0]),myClientHandler);
 
-            }
-        };
-    }
-};
-//int main() {
-//    std::cout << "Hello, World!" << std::endl;
-//    return 0;
-//}
+
+int main(int argc, char* argv[]) {
+        Server *server=new MySerialServer();
+        StringReverser *stringReverser=new StringReverser();
+        FileCacheManager *fileCacheManager=new FileCacheManager();
+        MyClientHandler *myClientHandler=new MyClientHandler(stringReverser,fileCacheManager);
+//        myClientHandler->handlerClient(5600);
+        server->open(atoi(argv[1]),myClientHandler);
+//        this_thread::sleep_for(chrono::microseconds(100000));
+        return 0;
+
+}

@@ -12,7 +12,7 @@ namespace server_side{
 class Server {
 public:
     //open the server and waite for clients
-    virtual void open(int port, ClientHandler clientHandler) = 0;
+    virtual void open(int port, ClientHandler *clientHandler) = 0;
     //close the server
     virtual void stop() = 0;
 
