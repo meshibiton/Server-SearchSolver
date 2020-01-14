@@ -9,6 +9,7 @@
 #include "Solver.h"
 #include "Searchable.h"
 #include "Searcher.h"
+#include "Matrix.h"
 
 using namespace  std;
 template <class T, class Solution>
