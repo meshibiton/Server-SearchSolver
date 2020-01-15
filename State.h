@@ -13,10 +13,12 @@ class State {
 private:
     T state;//the state represented by a string
     double cost;//cost to reach this state(set by setter)
-    State<T> camefrom;//the state we came from to this state(setter)
+    State<T> *camefrom;//the state we came from to this state(setter)
 public:
-    State(T state1) {
-        this->state = state1;
+    State<T>(T state,double cost,State<T> *came) {
+        this->state=state;
+        this->cost=cost;
+        this->camefrom=came;
     }
 
     T getState() const {
@@ -31,11 +33,13 @@ public:
 
     void setCost(double cost);
 
-    void setCamefrom(const State<T> &camefrom);
+
 
     double getCost() const;
 
-    const State<T> &getCamefrom() const;
+    State<T> *getCamefrom() const;
+
+    void setCamefrom(State<T> *camefrom);
 };
 
 template<class T>
@@ -54,13 +58,14 @@ double State<T>::getCost() const {
 }
 
 template<class T>
-const State<T> &State<T>::getCamefrom() const {
+State<T> *State<T>::getCamefrom() const {
     return camefrom;
 }
 
 template<class T>
-void State<T>::setCamefrom(const State<T> &camefrom) {
+void State<T>::setCamefrom(State<T> *camefrom) {
     State::camefrom = camefrom;
 }
+
 
 #endif //FINALPROJECTPART2_STATE_H
