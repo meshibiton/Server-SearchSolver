@@ -31,29 +31,31 @@ private:
     //priority_queue <type, vector<type>, loading func for min >>
     priority_queue<State<T> *, vector<State<T> *>, comperFuncState()> priortyQueue;
 public:
+    //push stat to the queue
     void push(State<T> *state) {
         priortyQueue.push(state);
     }
-
+    //get state from the queue, and remove the state
     State<T> *pop() {
         State<T> *firstState = top();
         this->priortyQueue.pop();
         return firstState;
     }
-
+    //get the top state
     State<T> *top() {
         State<T> *firstState = top();
         return this->priortyQueue.pop();
     }
-
+    //check if the state is empty
     bool isEmpty() {
         return priortyQueue().empty();
     }
 
+    //get the size of the queue
     unsigned long size() {
         return priortyQueue().size();
     }
-
+    //find iter of the queue if does not find return nullptr
     State<T> *find(State<T> *state) {
         vector<State<T> *> vecStates;
         State<T> *tempState;
@@ -93,6 +95,7 @@ public:
             this->push(state);
         }
     }
+    // check if exist
     bool isExist(State<T>* state){
         State<T> *tempState;
         tempState=this->find(state);
