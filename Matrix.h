@@ -1,5 +1,5 @@
 
-Matrix::Matrix() {}
+
 //
 // Created by meshi on 15/01/2020.
 //
