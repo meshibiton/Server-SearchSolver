@@ -22,39 +22,69 @@ struct comperFuncState {
     }
 };
 
-template<class T>
+template<class solution, class T>
 // An abstract class
-class MyPriorityQueue  {
+class MyPriorityQueue: public Searcher<solution,T> {
     // Data members of class
-private:
+protected:
     //// Syntax to create a min heap for priority queue
     //priority_queue <type, vector<type>, loading func for min >>
-    priority_queue<State<T> *, vector<State<T> *>, comperFuncState()> priortyQueue;
+    priority_queue<State<T> *, vector<State<T> *>, comperFuncState()> openList;
 public:
+    //for the algo
+    int getNumberOfNodesEvaluate() {
+        return this->evaluateNodes;
+    }
+
+    int openListSize() {
+        return (int) size();
+    }
+
+    bool openContains(State<T> *state) {
+
+        return  isExist(*state);
+    }
+    State<T>* popOpenList(){
+        return pop();
+    }
+
+    void addOpenList(State<T> *s){
+        push(s);
+    }
+    //abstract func
+    virtual solution search(Searchable<T> *searchable) = 0;
+
+
+
+    //------------overloud func of queue------------
     //push stat to the queue
     void push(State<T> *state) {
-        priortyQueue.push(state);
+        openList.push(state);
     }
+
     //get state from the queue, and remove the state
     State<T> *pop() {
         State<T> *firstState = top();
-        this->priortyQueue.pop();
+        this->openList.pop();
         return firstState;
     }
+
     //get the top state
     State<T> *top() {
         State<T> *firstState = top();
-        return this->priortyQueue.pop();
+        return this->openList.pop();
     }
+
     //check if the state is empty
     bool isEmpty() {
-        return priortyQueue().empty();
+        return openList().empty();
     }
 
     //get the size of the queue
     unsigned long size() {
-        return priortyQueue().size();
+        return openList().size();
     }
+
     //find iter of the queue if does not find return nullptr
     State<T> *find(State<T> *state) {
         vector<State<T> *> vecStates;
@@ -76,7 +106,41 @@ public:
         }
         return returnState;
     }
-    void erase(State<T>* state){
+    //return the reverse path
+    solution reversePath(State<T> *lastState, Searchable<T> *init) {
+
+        vector<State<T> *> shortPath;
+
+        while (!(lastState->Equals(init))) {
+            shortPath.push_back(lastState);
+            lastState = lastState->getCamefrom();
+        }
+        shortPath.push_back(lastState);
+        return shortPath;
+    }
+
+    bool containInClose(vector<State<T>*> closeVec,State<T> *s) {
+        for (const auto &state : closeVec) {
+            if(closeVec == s)
+                return true;
+        }
+        return false;
+    }
+    bool replacePathIfShorter(vector<State<T>*> closeVec,State<T> *state) {
+        for (const auto &oldState : closeVec) {
+            if(oldState == state && oldState >= state->getCost() ){
+                //remove the old state with the long path
+                this->erase(oldState);
+                //add the sort path
+                this->addOpenList(state);
+            }
+
+        }
+
+    }
+
+
+    void erase(State<T> *state) {
         vector<State<T> *> vecStates;
         State<T> *tempState;
         //pop all the state from the queue and check if the state exist
@@ -84,7 +148,7 @@ public:
             tempState = this->pop();
             if (*tempState == *state) {
                 free(state);
-                delete(state);
+                delete (state);
                 break;
             } else {
                 vecStates.push_back(tempState);
@@ -95,15 +159,18 @@ public:
             this->push(state);
         }
     }
+
     // check if exist
-    bool isExist(State<T>* state){
+    bool isExist(State<T> *state) {
         State<T> *tempState;
-        tempState=this->find(state);
-        if (tempState == nullptr){
+        tempState = this->find(state);
+        if (tempState == nullptr) {
             return false;
         }
         return true;
     }
+
+
 };
 
 #endif //FINALPROJECTPART2_MYPRIORTYQUEUE_H

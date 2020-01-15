@@ -12,18 +12,18 @@
 using namespace  std;
     class SearcherAbstract: public Searcher <class T, class Solution>{
     private:
-        MyPriorityQueue<State<T>> openList;
+//        MyPriorityQueue<State<T>> openList;
         int evaluateNodes;
 
 
     public:
         SearcherAbstract() {
-            openList = new MyPriorityQueue<State<T>>();
+//            openList = new MyPriorityQueue<State<T>>();
             evaluateNodes = 0;
         }
-        int openListSize(){
-            return openList.size();
-        }
+//        int openListSize(){
+////            return openList.size();
+//        }
         int getNumberOfevaluateNodes(){
             return this->evaluateNodes;
         }
@@ -31,10 +31,10 @@ using namespace  std;
         virtual Solution search(Searchable<T> searchable) = 0;
 
     protected:
-        State<T> popOpenList(){
-            evaluateNodes++;
-            return openList.pop();
-        }
+//        State<T> popOpenList(){
+//            evaluateNodes++;
+////            return openList.pop();
+//        }
 
     };
 #endif //FINALPROJECTPART2_SEARCHERABSTRACT_H
