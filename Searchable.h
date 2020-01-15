@@ -14,6 +14,7 @@ public:
     //check whether its the goal or not
     virtual bool isGoalState(State<T>*) = 0;
     virtual vector<State<T>*> getAllPossibleState( State<T> *current,  State<T> *goal)=0;
+    virtual vector< State<T> *> getAllPossibleState(State<T> *state) = 0;
     virtual ~Searchable(){}
 };
 #endif //FINALPROJECTPART2_SEARCHABLE_H

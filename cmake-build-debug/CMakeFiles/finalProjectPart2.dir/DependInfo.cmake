@@ -4,7 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/meshi/CLionProjects/finalProjectPart2/main.cpp" "/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/CMakeFiles/finalProjectPart2.dir/main.cpp.o"
+  "/home/raph/CLionProjects/finalProjectPart2/FileCacheManager.cpp" "/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/CMakeFiles/finalProjectPart2.dir/FileCacheManager.cpp.o"
+  "/home/raph/CLionProjects/finalProjectPart2/MyClientHandler.cpp" "/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/CMakeFiles/finalProjectPart2.dir/MyClientHandler.cpp.o"
+  "/home/raph/CLionProjects/finalProjectPart2/MyParallelServer.cpp" "/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/CMakeFiles/finalProjectPart2.dir/MyParallelServer.cpp.o"
+  "/home/raph/CLionProjects/finalProjectPart2/MySerialServer.cpp" "/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/CMakeFiles/finalProjectPart2.dir/MySerialServer.cpp.o"
+  "/home/raph/CLionProjects/finalProjectPart2/StringReverser.cpp" "/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/CMakeFiles/finalProjectPart2.dir/StringReverser.cpp.o"
+  "/home/raph/CLionProjects/finalProjectPart2/main.cpp" "/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/CMakeFiles/finalProjectPart2.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

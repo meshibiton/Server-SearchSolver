@@ -32,6 +32,10 @@ public:
     void setCost(double cost);
 
     void setCamefrom(const State<T> &camefrom);
+
+    double getCost() const;
+
+    const State<T> &getCamefrom() const;
 };
 
 template<class T>
@@ -42,6 +46,16 @@ void State<T>::setState(T state) {
 template<class T>
 void State<T>::setCost(double cost) {
     State::cost = cost;
+}
+
+template<class T>
+double State<T>::getCost() const {
+    return cost;
+}
+
+template<class T>
+const State<T> &State<T>::getCamefrom() const {
+    return camefrom;
 }
 
 template<class T>

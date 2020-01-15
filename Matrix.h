@@ -1,3 +1,5 @@
+
+Matrix::Matrix() {}
 //
 // Created by meshi on 15/01/2020.
 //
@@ -17,6 +19,8 @@ private:
     State<pair<int, int>> initialState;
     vector<State<pair<int, int>>> goalState;
 public:
+    Matrix(vector<vector<double >> );
+
     State<pair<int, int>> *getInitialState() {
         return this->initialState;
     }
@@ -38,7 +42,15 @@ public:
         return false;
     }
 
-    vector<State<pair<int, int>> *> getAllPossibleState(State<pair<int, int>> *current, State<pair<int, int>> *goal);
+    vector<State<pair<int, int>> *> getAllPossibleState(State<pair<int, int>> *current, State<pair<int, int>> *goal){
+
+
+
+
+    }
+    vector< State<pair<int, int>> *> getAllPossibleState(State<pair<int, int>> *state){
+
+    }
 
 };
 

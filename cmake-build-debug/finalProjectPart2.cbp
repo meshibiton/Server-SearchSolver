@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug"/>
+				<Option working_dir="/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug"/>
+				<Option working_dir="/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="finalProjectPart2">
-				<Option output="/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/finalProjectPart2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug"/>
+				<Option output="/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/finalProjectPart2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 finalProjectPart2"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 finalProjectPart2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="finalProjectPart2/fast">
-				<Option output="/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/finalProjectPart2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug"/>
+				<Option output="/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/finalProjectPart2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,27 +67,93 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 finalProjectPart2/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 finalProjectPart2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug"/>
+				<Option working_dir="/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/meshi/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/raph/CLionProjects/finalProjectPart2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/meshi/CLionProjects/finalProjectPart2/main.cpp">
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/CacheManager.h">
 			<Option target="finalProjectPart2"/>
 		</Unit>
-		<Unit filename="/home/meshi/CLionProjects/finalProjectPart2/CMakeLists.txt">
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/ClientHandler.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/DataStrucForSearcher.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/FileCacheManager.cpp">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/FileCacheManager.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/Main.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/Matrix.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/MyClientHandler.cpp">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/MyClientHandler.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/MyParallelServer.cpp">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/MyParallelServer.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/MyPriortyQueue.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/MySerialServer.cpp">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/MySerialServer.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/Searchable.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/Searcher.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/SearcherAbstract.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/Server.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/Solver.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/State.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/StringReverser.cpp">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/StringReverser.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/main.cpp">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
