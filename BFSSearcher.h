@@ -1,0 +1,95 @@
+//
+// Created by raph on 1/17/20.
+//
+
+#ifndef FINALPROJECTPART2_BFSSEARCHER_H
+#define FINALPROJECTPART2_BFSSEARCHER_H
+
+
+#include "SearcherAbstract.h"
+
+using namespace std;
+#include <queue>
+template <class T>
+// An abstract class
+class BFSSearcher: SearcherAbstract{
+private:
+
+    queue<State<T>*> openList;
+
+    int openListSize() {
+        return (int) openList.size();
+    }
+
+    bool openContains(State<T> *state) {
+
+        return  isExist(*state);
+    }
+    State<T>* popOpenList(){
+        return  openList.pop();
+    }
+
+    void addOpenList(State<T> *s){
+        this->evaluateNodes++;
+        openList.push(s);
+    }
+
+    bool isExist(State<T> *state) {
+        vector<State<T> *> vecStates;
+        State<T> *tempState;
+        bool flag = false;
+        //pop all the state from the queue and check if the state exist
+        while (!openList.empty()) {
+            tempState = this->popOpenList();
+            if (*tempState == *state) {
+                flag = true;
+            } else {
+                vecStates.push_back(tempState);
+            }
+        }
+        //return the queue to the first state
+        for (const auto &state : vecStates) {
+            this->addOpenList(state);
+        }
+        return flag;
+    }
+
+
+public:
+
+
+    vector<State<T> *> search(Searchable<T> *searchable) {
+        this->evaluateNodes = 0;
+        vector<State<T>*> close;
+        this->addOpenList(searchable->getInitialState());
+        while (this->openListSize() > 0) {
+            State<T> *state = this->popOpenList();
+            if (!this->containsClose(close, state))
+                close.push_back(state);
+
+            if (searchable->isGoalState(state))
+                return this->backTrace(state, searchable);
+
+            vector<State<T>*> states = searchable->getAllPossibleStates(state);
+            for (State<T> *s : states) {
+                if (!this->containsClose(close, s) && !this->openContains(s)) {
+                    this->addOpenList(s);
+                }
+            }
+        }
+        return nullptr;
+    }
+
+
+
+
+
+    ~BFSSearcher(){}
+
+
+};
+
+
+
+
+#endif //FINALPROJECTPART2_BFSSEARCHER_H

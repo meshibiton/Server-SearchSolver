@@ -12,7 +12,7 @@
 using namespace  std;
 
 class SearcherAbstract: public Searcher <class T, class Solution>{
-private:
+protected:
     int evaluateNodes;
 
 
@@ -42,7 +42,13 @@ public:
         shortPath.push_back(lastState);
         return shortPath;
     }
-
+    bool containInClose(vector<State<T>*> closeVec,State<T> *s) {
+        for (const auto &state : closeVec) {
+            if(state == s)
+                return true;
+        }
+        return false;
+    }
 
 };
 

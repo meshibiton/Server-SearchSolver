@@ -47,7 +47,7 @@ public:
     }
 
     void addOpenList(State<T> *s){
-
+        this->evaluateNodes++;
         push(s);
     }
 
@@ -105,13 +105,13 @@ public:
         return returnState;
     }
 
-    bool containInClose(vector<State<T>*> closeVec,State<T> *s) {
-        for (const auto &state : closeVec) {
-            if(closeVec == s)
-                return true;
-        }
-        return false;
-    }
+//    bool containInClose(vector<State<T>*> closeVec,State<T> *s) {
+//        for (const auto &state : closeVec) {
+//            if(closeVec == s)
+//                return true;
+//        }
+//        return false;
+//    }
     bool replacePathIfShorter(vector<State<T>*> closeVec,State<T> *state) {
         for (const auto &oldState : closeVec) {
             if(oldState == state && oldState >= state->getCost() ){

@@ -8,7 +8,7 @@
 
 #include "Matrix.h"
 #include "Searcher.h"
-#include "BestFirstSearcher1.h"
+#include "BestFirstSearcher.h"
 #include "DFSSearcher.h"
 
 using namespace  std;
@@ -19,7 +19,7 @@ private:
 public:
     SearcherSolver() {
         //need func that will return the best algo,now its best
-        this->searcher = new BestFirstSearcher1<pair<int, int>>();
+        this->searcher = new BestFirstSearcher<pair<int, int>>();
 //        this->searcher = new DFSSearcher<pair<int, int>>();
     }
 
