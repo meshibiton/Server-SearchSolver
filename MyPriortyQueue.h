@@ -10,6 +10,7 @@
 #include "DataStrucForSearcher.h"
 #include <queue>
 #include "State.h"
+#include "SearcherAbstract.h"
 
 using namespace std;
 
@@ -22,19 +23,16 @@ struct comperFuncState {
     }
 };
 
-template<class solution, class T>
+template <class T, class Solution>
 // An abstract class
-class MyPriorityQueue: public Searcher<solution,T> {
+class MyPriorityQueue: public SearcherAbstract <T, Solution> {
     // Data members of class
 protected:
     //// Syntax to create a min heap for priority queue
     //priority_queue <type, vector<type>, loading func for min >>
     priority_queue<State<T> *, vector<State<T> *>, comperFuncState()> openList;
 public:
-    //for the algo
-    int getNumberOfNodesEvaluate() {
-        return this->evaluateNodes;
-    }
+
 
     int openListSize() {
         return (int) size();
@@ -49,10 +47,11 @@ public:
     }
 
     void addOpenList(State<T> *s){
+
         push(s);
     }
     //abstract func
-    virtual solution search(Searchable<T> *searchable) = 0;
+    virtual Solution search(Searchable<T> *searchable) = 0;
 
 
 
@@ -105,18 +104,6 @@ public:
             this->push(state);
         }
         return returnState;
-    }
-    //return the reverse path
-    solution reversePath(State<T> *lastState, Searchable<T> *init) {
-
-        vector<State<T> *> shortPath;
-
-        while (!(lastState->Equals(init))) {
-            shortPath.push_back(lastState);
-            lastState = lastState->getCamefrom();
-        }
-        shortPath.push_back(lastState);
-        return shortPath;
     }
 
     bool containInClose(vector<State<T>*> closeVec,State<T> *s) {

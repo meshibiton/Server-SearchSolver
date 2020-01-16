@@ -9,14 +9,10 @@
 
 template <class T, class Solution>
 class Searcher {
-private:
-    int numOfNodes=0;
 public:
     //get the solution from searcher
     virtual Solution search(Searchable<T>* searchable) = 0;
-    virtual int getNumOfNodesEvaluated() {
-        return numOfNodes;
-    }
+    virtual int getNumOfNodesEvaluated()= 0;
     virtual ~Searcher(){}
 };
 

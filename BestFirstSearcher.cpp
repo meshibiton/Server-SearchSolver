@@ -23,7 +23,7 @@ public:
         //if there is not any other State in the queue
         while (!this->isEmpty()) {
             this->numOfNodesEvaluated++;
-            //start withe the min state in the queue
+            //start with the min state in the queue
             State<T> *minState = this->popOpenList();
             closeVec.insert(minState);
             //if the state is the goal

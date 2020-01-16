@@ -9,32 +9,41 @@
 #include "MyPriortyQueue.h"
 #include "State.h"
 #include "Searchable.h"
+
 using namespace  std;
+
     class SearcherAbstract: public Searcher <class T, class Solution>{
     private:
-//        MyPriorityQueue<State<T>> openList;
         int evaluateNodes;
 
 
     public:
         SearcherAbstract() {
-//            openList = new MyPriorityQueue<State<T>>();
             evaluateNodes = 0;
         }
-//        int openListSize(){
-////            return openList.size();
-//        }
-        int getNumberOfevaluateNodes(){
+
+        //for the algo
+        int getNumberOfNodesEvaluate() {
             return this->evaluateNodes;
         }
 
+
+        //return the reverse path
+        vector<State<T> *> reversePath(State<T> *lastState, Searchable<T> *init) {
+
+            vector<State<T> *> shortPath;
+
+            while (!(lastState->Equals(init))) {
+                shortPath.push_back(lastState);
+                lastState = lastState->getCamefrom();
+            }
+            shortPath.push_back(lastState);
+            return shortPath;
+        }
+
+
         virtual Solution search(Searchable<T> searchable) = 0;
 
-    protected:
-//        State<T> popOpenList(){
-//            evaluateNodes++;
-////            return openList.pop();
-//        }
 
     };
 #endif //FINALPROJECTPART2_SEARCHERABSTRACT_H
