@@ -25,7 +25,7 @@ struct comperFuncState {
 
 template <class T, class Solution>
 // An abstract class
-class MyPriorityQueue:  {
+class MyPriorityQueue: public SearcherAbstract <T, Solution> {
     // Data members of class
 protected:
     //// Syntax to create a min heap for priority queue
