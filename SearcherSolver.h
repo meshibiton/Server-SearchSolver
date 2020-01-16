@@ -9,7 +9,7 @@
 #include "Matrix.h"
 #include "Searcher.h"
 #include "BestFirstSearcher.h"
-#include "DFSSearcher.h"
+
 
 using namespace  std;
 //template <class T, class Solution>

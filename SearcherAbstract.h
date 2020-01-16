@@ -35,7 +35,7 @@ public:
 
         vector<State<T> *> shortPath;
 
-        while (!(lastState == init)) {
+        while (!(*lastState == *init)) {
             shortPath.push_back(lastState);
             lastState = lastState->getCamefrom();
         }
