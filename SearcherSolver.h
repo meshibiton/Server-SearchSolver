@@ -10,24 +10,57 @@
 #include "Searchable.h"
 #include "Searcher.h"
 #include "Matrix.h"
+#include "BestFirstSearcher.h"
 
 using namespace  std;
-template <class T, class Solution>
+//template <class T, class Solution>
 class SearcherSolver: public Solver<string,vector<vector<double >>>{
 private:
-    Searcher<T,Solution> *searcher;
+    Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher;
 public:
     SearcherSolver() {
-        this->searcher=;
-        // Searcher<pair<int,int>,vector<State<pair<int,int>>*>> *searcher=new searcher();
-        //need func that will return the best algo
+        //need func that will return the best algo,now its best
+      //  this->searcher = new BestFirstSearcher<pair<int, int>>();
     }
 
-    string solve(vector<vector<double >> problem){
-        Searchable<pair<int,int>>* searchable=new Matrix(problem);
+
+    string solve(vector<vector<double >> problem) {
+        //create the problem we want, this is for matrix problem
+        Searchable<pair<int, int>> *searchable = new Matrix(problem);
         vector<State<pair<int, int> > *> solution = this->searcher->search(searchable);
-
-
+        string solutionString = FromVecToString(solution);
+        return solutionString;
+    }
+    string FromVecToString(vector<State<pair<int, int> > *> solution) {
+        string solutionString = "";
+        int i;
+        for (i = 0; i < solution.size() - 1; i++) {
+            pair<int, int> curPlace = solution[i]->getState();
+            pair<int, int> nextMove = solution[i + 1]->getState();
+            string cost = to_string((int) solution[i + 1]->getCost());
+            //if the row number got heigher that means we go down in the matrix
+            if (nextMove.first > curPlace.first) {
+                solutionString = solutionString + "Down";
+            }
+            //if the column got heigher that means we go right
+            if (nextMove.second > curPlace.second) {
+                solutionString = solutionString + "Right";
+            }
+            //if the row became less that means we go up
+            if (nextMove.first < curPlace.first) {
+                solutionString = solutionString + "Up";
+            }
+            //if the column became less that means we go left
+            if (nextMove.first < curPlace.first) {
+                solutionString = solutionString + "Left";
+            }
+            solutionString = solutionString + "(" + cost + ")";
+            //add comma between each other
+            if (i != solution.size() - 2) {
+                solutionString = solutionString + ",";
+            }
+        }
+        return solutionString;
     }
 };
 

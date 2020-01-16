@@ -49,6 +49,9 @@ public:
 
     vector<State<pair<int, int>> *> getAllPossibleState(State<pair<int, int>> *state);
 
+    State< pair<int, int> >* getInitialState() {
+        return this->initialState;
+    }
 };
 
 #endif //FINALPROJECTPART2_MATRIX_H
