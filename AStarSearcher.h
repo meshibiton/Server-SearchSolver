@@ -46,6 +46,17 @@ public:
                         this->replacePathIfShorter(s);
                     }
                 }
+//            } else if (!pqs.isExistVector(successors[i])) {
+//                State<T> *item = pqs.find(successors[i]);
+//                if (successors[i]->getCost() < item->getCost()) {
+//                    pqs.erase(item);
+//                    pqs.pushToOpen(successors[i]);
+//                } else {
+//                    delete (successors[i]);
+//                }
+//            } else {
+//                delete (successors[i]);
+//            }
             }
         }
     }

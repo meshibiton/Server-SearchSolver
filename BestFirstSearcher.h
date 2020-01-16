@@ -18,7 +18,7 @@ class BestFirstSearcher : public MyPriorityQueue<Solution, T> {
 public:
     vector<State<T> *> search(Searchable<T> *searchable) {
 
-        this->numOfNodesEvaluated = 0;
+        ////this->numOfNodesEvaluated = 0;
         //add initial state to the priory Queue
         State<T> *init = searchable->getInitialState();
         State<T> *goal = searchable->getGoalState();
@@ -26,7 +26,7 @@ public:
         vector<State<T> *> closeVec;
         //if there is not any other State in the queue
         while (!this->isEmpty()) {
-            this->numOfNodesEvaluated++;
+           //// this->numOfNodesEvaluated++;
             //start with the min state in the queue
             State<T> *minState = this->popOpenList();
             closeVec.insert(minState);

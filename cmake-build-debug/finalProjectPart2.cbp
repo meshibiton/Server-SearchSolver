@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/AStarSearcher.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/BestFirstSearcher.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/CacheManager.h">
 			<Option target="finalProjectPart2"/>
 		</Unit>
