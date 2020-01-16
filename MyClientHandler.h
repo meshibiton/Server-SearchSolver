@@ -1,7 +1,7 @@
 //
 // Created by raph on 1/13/20.
 //
-
+#pragma once
 #ifndef FINALPROJECTPART2_MYCLIENTHANDLER_H
 #define FINALPROJECTPART2_MYCLIENTHANDLER_H
 using namespace  std;

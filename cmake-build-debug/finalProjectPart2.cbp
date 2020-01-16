@@ -90,10 +90,16 @@
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/BestFirstSearcher.h">
 			<Option target="finalProjectPart2"/>
 		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/BestFirstSearcher1.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/CacheManager.h">
 			<Option target="finalProjectPart2"/>
 		</Unit>
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/ClientHandler.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/DFSSearcher.h">
 			<Option target="finalProjectPart2"/>
 		</Unit>
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/DataStrucForSearcher.h">
@@ -106,6 +112,9 @@
 			<Option target="finalProjectPart2"/>
 		</Unit>
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/Main.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/Matrix.cpp">
 			<Option target="finalProjectPart2"/>
 		</Unit>
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/Matrix.h">
@@ -123,7 +132,7 @@
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/MyParallelServer.h">
 			<Option target="finalProjectPart2"/>
 		</Unit>
-		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/MyPriortyQueue.h">
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/MyPriorityQueue.h">
 			<Option target="finalProjectPart2"/>
 		</Unit>
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/MySerialServer.cpp">
@@ -139,6 +148,9 @@
 			<Option target="finalProjectPart2"/>
 		</Unit>
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/SearcherAbstract.h">
+			<Option target="finalProjectPart2"/>
+		</Unit>
+		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/SearcherSolver.h">
 			<Option target="finalProjectPart2"/>
 		</Unit>
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/Server.h">

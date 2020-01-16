@@ -1,7 +1,7 @@
 //
 // Created by meshi on 14/01/2020.
 //
-
+#pragma once
 #ifndef FINALPROJECTPART2_SEARCHABLE_H
 #define FINALPROJECTPART2_SEARCHABLE_H
 

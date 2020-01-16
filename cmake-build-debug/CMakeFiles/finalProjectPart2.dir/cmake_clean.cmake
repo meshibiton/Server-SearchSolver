@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/finalProjectPart2.dir/MyParallelServer.cpp.o"
   "CMakeFiles/finalProjectPart2.dir/MySerialServer.cpp.o"
   "CMakeFiles/finalProjectPart2.dir/StringReverser.cpp.o"
+  "CMakeFiles/finalProjectPart2.dir/Matrix.cpp.o"
   "finalProjectPart2.pdb"
   "finalProjectPart2"
 )

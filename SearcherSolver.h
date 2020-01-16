@@ -1,16 +1,15 @@
 //
 // Created by meshi on 14/01/2020.
 //
-
+#pragma once
 #ifndef FINALPROJECTPART2_SEARCHERSOLVER_H
 #define FINALPROJECTPART2_SEARCHERSOLVER_H
 
-#include <vector>
-#include "Solver.h"
-#include "Searchable.h"
-#include "Searcher.h"
+
 #include "Matrix.h"
-#include "BestFirstSearcher.h"
+#include "Searcher.h"
+#include "BestFirstSearcher1.h"
+#include "DFSSearcher.h"
 
 using namespace  std;
 //template <class T, class Solution>
@@ -20,7 +19,8 @@ private:
 public:
     SearcherSolver() {
         //need func that will return the best algo,now its best
-      //  this->searcher = new BestFirstSearcher<pair<int, int>>();
+        this->searcher = new BestFirstSearcher1<pair<int, int>>();
+//        this->searcher = new DFSSearcher<pair<int, int>>();
     }
 
 
@@ -28,6 +28,10 @@ public:
         //create the problem we want, this is for matrix problem
         Searchable<pair<int, int>> *searchable = new Matrix(problem);
         vector<State<pair<int, int> > *> solution = this->searcher->search(searchable);
+        if (solution.size() == 0) {
+            return "No path";
+
+        }
         string solutionString = FromVecToString(solution);
         return solutionString;
     }

@@ -1,10 +1,8 @@
-#include <iostream>
-#include "MySerialServer.h"
-#include "MyClientHandler.h"
-#include "StringReverser.h"
+#include "Server.h"
 #include "FileCacheManager.h"
+#include "MyClientHandler.h"
+#include "MySerialServer.h"
 #include "SearcherSolver.h"
-
 
 int main(int argc, char *argv[]) {
     Server *server = new MySerialServer();

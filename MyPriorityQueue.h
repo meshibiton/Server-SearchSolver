@@ -1,17 +1,13 @@
 //
 // Created by meshi on 16/01/2020.
 //
+#pragma once
 
 #ifndef FINALPROJECTPART2_MYPRIORITYQUEUE_H
 #define FINALPROJECTPART2_MYPRIORITYQUEUE_H
 
 
-
-
-#include "State.h"
-#include <vector>
 #include <queue>
-#include "State.h"
 #include "SearcherAbstract.h"
 
 using namespace std;
@@ -28,14 +24,15 @@ struct comperFuncState {
 
 template <class T, class Solution>
 
-class MyPriorityQueue: public SearcherAbstract {
+class MyPriorityQueue: public SearcherAbstract  {
     // Data members of class
 protected:
     //// Syntax to create a min heap for priority queue
     //priority_queue <type, vector<type>, loading func for min >>
     priority_queue<State<T> *, vector<State<T> *>, comperFuncState()> openList;
 public:
-
+    //abstract func
+    virtual Solution search(Searchable<T> *searchable) = 0;
 
     int openListSize() {
         return (int) size();
@@ -53,8 +50,7 @@ public:
 
         push(s);
     }
-    //abstract func
-    virtual Solution search(Searchable<T> *searchable) = 0;
+
 
 
 

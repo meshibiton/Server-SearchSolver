@@ -1,9 +1,10 @@
 //
 // Created by meshi on 14/01/2020.
 //
-
+#pragma once
 #ifndef FINALPROJECTPART2_SEARCHER_H
 #define FINALPROJECTPART2_SEARCHER_H
+
 
 #include "Searchable.h"
 

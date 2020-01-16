@@ -1,6 +1,7 @@
 //
 // Created by meshi on 13/01/2020.
 //
+#pragma once
 
 #ifndef FINALPROJECTPART2_SERVER_H
 #define FINALPROJECTPART2_SERVER_H

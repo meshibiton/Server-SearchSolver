@@ -1,6 +1,7 @@
 //
 // Created by raph on 1/13/20.
 //
+#pragma once
 
 #ifndef FINALPROJECTPART2_SOLVER_H
 #define FINALPROJECTPART2_SOLVER_H

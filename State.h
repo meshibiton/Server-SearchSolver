@@ -1,17 +1,17 @@
 //
 // Created by meshi on 15/01/2020.
 //
+#pragma once
 
 #ifndef FINALPROJECTPART2_STATE_H
 #define FINALPROJECTPART2_STATE_H
 using namespace std;
 
-#include <algorithm>
-
 template<class T>
 class State {
 private:
-    T state;//the state represented by a string
+    //the state represented by a string
+    T state;
     double cost;//cost to reach this state(set by setter)
     State<T> *camefrom;//the state we came from to this state(setter)
 public:
@@ -25,10 +25,10 @@ public:
         return state;
     }
 
-    bool Equals(State<T> s) {//we overload objects Equals method
-        return equal(this->state, s.state);
-    }
 
+    bool operator==(State<T> s) {
+        return (getState() == s.getState());
+    }
     void setState(T state);
 
     void setCost(double cost);

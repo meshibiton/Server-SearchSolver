@@ -3,14 +3,14 @@
 //
 // Created by meshi on 15/01/2020.
 //
-
+#pragma once
 #ifndef FINALPROJECTPART2_MATRIX_H
 #define FINALPROJECTPART2_MATRIX_H
 
-#include <vector>
+
+
 #include "Searchable.h"
-#include "State.h"
-#include <algorithm>
+
 
 using namespace std;
 
@@ -34,7 +34,7 @@ public:
         double costGoal = matrix[PairGoalState.first][PairGoalState.second];
         double costInitial = matrix[PairInitialState.first][PairInitialState.second];
         //create the object of goal and initial state
-        this->goalState = new State<pair<int, int>>(PairGoalState, , nullptr);
+        this->goalState = new State<pair<int, int>>(PairGoalState, costGoal , nullptr);
         this->initialState = new State<pair<int, int>>(PairInitialState, costInitial, nullptr);
         this->matrix = matrix;
     }

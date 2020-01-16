@@ -150,6 +150,33 @@ FileCacheManager.cpp.s:
 	$(MAKE) -f CMakeFiles/finalProjectPart2.dir/build.make CMakeFiles/finalProjectPart2.dir/FileCacheManager.cpp.s
 .PHONY : FileCacheManager.cpp.s
 
+Matrix.o: Matrix.cpp.o
+
+.PHONY : Matrix.o
+
+# target to build an object file
+Matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/finalProjectPart2.dir/build.make CMakeFiles/finalProjectPart2.dir/Matrix.cpp.o
+.PHONY : Matrix.cpp.o
+
+Matrix.i: Matrix.cpp.i
+
+.PHONY : Matrix.i
+
+# target to preprocess a source file
+Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/finalProjectPart2.dir/build.make CMakeFiles/finalProjectPart2.dir/Matrix.cpp.i
+.PHONY : Matrix.cpp.i
+
+Matrix.s: Matrix.cpp.s
+
+.PHONY : Matrix.s
+
+# target to generate assembly for a file
+Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/finalProjectPart2.dir/build.make CMakeFiles/finalProjectPart2.dir/Matrix.cpp.s
+.PHONY : Matrix.cpp.s
+
 MyClientHandler.o: MyClientHandler.cpp.o
 
 .PHONY : MyClientHandler.o
@@ -297,6 +324,9 @@ help:
 	@echo "... FileCacheManager.o"
 	@echo "... FileCacheManager.i"
 	@echo "... FileCacheManager.s"
+	@echo "... Matrix.o"
+	@echo "... Matrix.i"
+	@echo "... Matrix.s"
 	@echo "... MyClientHandler.o"
 	@echo "... MyClientHandler.i"
 	@echo "... MyClientHandler.s"

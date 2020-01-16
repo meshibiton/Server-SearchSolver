@@ -4,11 +4,12 @@
 
 #ifndef FINALPROJECTPART2_MAIN_H
 #define FINALPROJECTPART2_MAIN_H
-#include <iostream>
-#include "MySerialServer.h"
-#include "StringReverser.h"
+
+
+#include "Server.h"
 #include "FileCacheManager.h"
 #include "MyClientHandler.h"
+#include "MySerialServer.h"
 #include "SearcherSolver.h"
 
 namespace server_side {
