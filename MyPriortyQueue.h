@@ -14,7 +14,7 @@
 
 using namespace std;
 
-//6.4 - object functions
+//6.4 -- object functions
 struct comperFuncState {
     template<class T>
     bool operator()(State<T> *stateCmp, State<T> *otherState) const {
