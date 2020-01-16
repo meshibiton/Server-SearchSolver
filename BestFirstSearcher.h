@@ -1,6 +1,10 @@
 //
-// Created by raph on 1/15/20.
+// Created by raph on 1/16/20.
 //
+
+#ifndef FINALPROJECTPART2_BESTFIRSTSEARCHER_H
+#define FINALPROJECTPART2_BESTFIRSTSEARCHER_H
+
 
 
 #include <string>
@@ -45,4 +49,9 @@ public:
             }
         }
     }
+    ~BestFirstSearcher(){}
 };
+
+
+};
+#endif //FINALPROJECTPART2_BESTFIRSTSEARCHER_H
