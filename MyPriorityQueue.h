@@ -7,18 +7,20 @@
 #define FINALPROJECTPART2_MYPRIORITYQUEUE_H
 
 
+#include <iostream>
 #include <queue>
 #include "SearcherAbstract.h"
 
 using namespace std;
 //6.4 -- object functions
-struct comperFuncState {
-    template<class T>
-    bool operator()(State<T> *stateCmp, State<T> *otherState) const {
-        return stateCmp->getCost() > stateCmp->getCost();
-
+template <class T>
+class comp {
+public:
+    bool operator()(State<T> *stateCmp, State<T>* otherState) {
+        return stateCmp->getCost() > otherState->getCost();
     }
 };
+
 
 
 
@@ -29,7 +31,8 @@ class MyPriorityQueue: public SearcherAbstract  {
 protected:
     //// Syntax to create a min heap for priority queue
     //priority_queue <type, vector<type>, loading func for min >>
-    priority_queue<State<T> *, vector<State<T> *>, comperFuncState()> openList;
+
+    priority_queue<State<T> *, vector<State<T> *>, comp<T>> openList;
 public:
     //abstract func
     virtual Solution search(Searchable<T> *searchable) = 0;
