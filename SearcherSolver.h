@@ -39,7 +39,7 @@ public:
     string FromVecToString(vector<State<pair<int, int> > *> solution) {
         string solutionString = "";
         int i;
-        for (i = 0; i < solution.size() - 1; i++) {
+        for (i = 0; i < solution.size() ; i++) {
             pair<int, int> curPlace = solution[i]->getState();
             pair<int, int> nextMove = solution[i + 1]->getState();
             string cost = to_string((int) solution[i + 1]->getCost());

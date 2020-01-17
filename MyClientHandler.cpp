@@ -20,9 +20,15 @@ vector<vector<double >> MyClientHandler::fromStringToVec(string row) {
             numString += c;
 
         } else {
-            if (c == '\n') {
-                bigVec.push_back(vactorRow);
+            if (c == '\n'&& vactorRow.empty()&& numString =="") {
+                break;
 
+            }
+            if (c == '\n') {
+                vactorRow.push_back(stof(numString));
+                numString = "";
+                bigVec.push_back(vactorRow);
+                vactorRow.clear();
             } else {
                 vactorRow.push_back(stof(numString));
                 numString = "";

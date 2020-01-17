@@ -80,7 +80,7 @@ public:
 
 //        State<T> *firstState = top();
 //        return this->openList.pop();//
-        State<T> *firstState = top();
+        State<T> *firstState = this->openList.top();
         return firstState;
     }
 

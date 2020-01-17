@@ -31,17 +31,22 @@ public:
     vector<State<T> *> reversePath(State<T> *lastState, State<T> *init) {
 
         vector<State<T> *> shortPath;
-
+        stack <State<T> *> shortPathStack;
         while (!(lastState->equals(init))) {
-            shortPath.push_back(lastState);
+            shortPathStack.push(lastState);
             lastState = lastState->getCamefrom();
         }
-        shortPath.push_back(lastState);
+        shortPathStack.push(lastState);
+        while (!shortPathStack.empty()){
+            shortPath.push_back(shortPathStack.top());
+            shortPathStack.pop();
+        }
+
         return shortPath;
     }
     bool containInClose(vector<State<T>*> closeVec,State<T> *s) {
         for (const auto &state : closeVec) {
-            if(state == s)
+            if(s->equals(state))
                 return true;
         }
         return false;

@@ -24,12 +24,12 @@ private:
 public:
     Matrix(const vector<vector<double >> &matrix) {
         //num of vectors in the vector of vectores
-        this->numRows = matrix.size() - 2;
+        this->numRows = matrix.size() -2;
         //num of element in each vector
         this->numColumn = matrix[0].size();
         //first we take the values pair of start and end points,means row and column
-        pair<int, int> PairInitialState = {(int) matrix[numRows + 1][0], (int) matrix[numRows + 1][1]};
-        pair<int, int> PairGoalState = {(int) matrix[numRows + 2][0], (int) matrix[numRows + 2][1]};
+        pair<int, int> PairInitialState = {(int) matrix[numRows ][0], (int) matrix[numRows ][1]};
+        pair<int, int> PairGoalState = {(int) matrix[numRows + 1][0], (int) matrix[numRows + 1][1]};
         //we save the cost in var which is exactly the value in the cell in the matrix
         double costGoal = matrix[PairGoalState.first][PairGoalState.second];
         double costInitial = matrix[PairInitialState.first][PairInitialState.second];
