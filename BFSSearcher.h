@@ -59,20 +59,24 @@ public:
 
 
     vector<State<T> *> search(Searchable<T> *searchable) {
+        //initial with 0
         this->evaluateNodes = 0;
-        vector<State<T>*> close;
+        vector<State<T>*> closeVec;
+        //add the init to the queue
         this->addOpenList(searchable->getInitialState());
+        //while ther are nod in the queue continue
         while (this->openListSize() > 0) {
-            State<T> *state = this->popOpenList();
-            if (!this->containsClose(close, state))
-                close.push_back(state);
+            State<T> *curState = this->popOpenList();
+            //check if exist in the visited nod
+            if (!this->containsClose(closeVec, curState))
+                closeVec.push_back(curState);
 
-            if (searchable->isGoalState(state))
-                return this->backTrace(state, searchable);
-
-            vector<State<T>*> states = searchable->getAllPossibleStates(state);
-            for (State<T> *s : states) {
-                if (!this->containsClose(close, s) && !this->openContains(s)) {
+            if (searchable->isGoalState(curState))
+                return this->reversePath(curState, searchable->getInitialState());
+            //return the all Neighbors
+            vector<State<T>*> statesVec = searchable->getAllPossibleStates(curState);
+            for (State<T> *s : statesVec) {
+                if (!this->containsClose(closeVec, s) && !this->openContains(s)) {
                     this->addOpenList(s);
                 }
             }
