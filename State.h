@@ -26,8 +26,10 @@ public:
     }
 
 
-    bool operator==(State<T> s) {
-        return (getState() == s.getState());
+
+
+    bool equals(State<T> *state){
+        return this->state == state->state;
     }
     void setState(T state);
 
