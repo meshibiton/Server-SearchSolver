@@ -5,6 +5,11 @@ CMakeFiles/finalProjectPart2.dir/FileCacheManager.cpp.o: ../CacheManager.h
 CMakeFiles/finalProjectPart2.dir/FileCacheManager.cpp.o: ../FileCacheManager.cpp
 CMakeFiles/finalProjectPart2.dir/FileCacheManager.cpp.o: ../FileCacheManager.h
 
+CMakeFiles/finalProjectPart2.dir/Matrix.cpp.o: ../Matrix.cpp
+CMakeFiles/finalProjectPart2.dir/Matrix.cpp.o: ../Matrix.h
+CMakeFiles/finalProjectPart2.dir/Matrix.cpp.o: ../Searchable.h
+CMakeFiles/finalProjectPart2.dir/Matrix.cpp.o: ../State.h
+
 CMakeFiles/finalProjectPart2.dir/MyClientHandler.cpp.o: ../CacheManager.h
 CMakeFiles/finalProjectPart2.dir/MyClientHandler.cpp.o: ../ClientHandler.h
 CMakeFiles/finalProjectPart2.dir/MyClientHandler.cpp.o: ../MyClientHandler.cpp
@@ -23,13 +28,20 @@ CMakeFiles/finalProjectPart2.dir/StringReverser.cpp.o: ../Solver.h
 CMakeFiles/finalProjectPart2.dir/StringReverser.cpp.o: ../StringReverser.cpp
 CMakeFiles/finalProjectPart2.dir/StringReverser.cpp.o: ../StringReverser.h
 
+CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../BestFirstSearcher.h
 CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../CacheManager.h
 CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../ClientHandler.h
 CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../FileCacheManager.h
+CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../Matrix.h
 CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../MyClientHandler.h
+CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../MyPriorityQueue.h
 CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../MySerialServer.h
+CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../Searchable.h
+CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../Searcher.h
+CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../SearcherAbstract.h
+CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../SearcherSolver.h
 CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../Server.h
 CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../Solver.h
-CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../StringReverser.h
+CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../State.h
 CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../main.cpp
 
