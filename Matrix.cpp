@@ -49,3 +49,7 @@ vector<State<pair<int, int>> *>Matrix::getAllPossibleState(State<pair<int, int>>
 
 }
 
+State<pair<int,int>>* Matrix::getGoalState(){
+    return this->goalState;
+}
+

@@ -41,7 +41,7 @@ public:
 
     //check whether its the goal or not
     bool isGoalState(State<pair<int, int>> *checkIfGoal);
-
+    State<pair<int,int>>* getGoalState();
 //    vector<State<pair<int, int>> *> getAllPossibleState(State<pair<int, int>> *current, State<pair<int, int>> *goal) {
 //
 //

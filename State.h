@@ -24,6 +24,9 @@ public:
     T getState() const {
         return state;
     }
+    bool operator==(State<T> s) {
+        return (getState() == s.getState());
+    }
 
 
 

@@ -24,9 +24,9 @@ public:
 
 
 
-template <class T, class Solution>
+template <class T>
 
-class MyPriorityQueue: public SearcherAbstract  {
+class MyPriorityQueue: public SearcherAbstract<T>  {
     // Data members of class
 protected:
     //// Syntax to create a min heap for priority queue
@@ -34,16 +34,21 @@ protected:
 
     priority_queue<State<T> *, vector<State<T> *>, comp<T>> openList;
 public:
-    //abstract func
-    virtual Solution search(Searchable<T> *searchable) = 0;
-
     int openListSize() {
         return (int) size();
     }
-
+    // check if exist
+    bool isExist(State<T> *state) {
+        State<T> *tempState;
+        tempState = this->find(state);
+        if (tempState == nullptr) {
+            return false;
+        }
+        return true;
+    }
     bool openContains(State<T> *state) {
-
-        return  isExist(*state);
+        bool flag=this->isExist(state);
+        return  flag;
     }
     State<T>* popOpenList(){
         return pop();
@@ -72,13 +77,19 @@ public:
 
     //get the top state
     State<T> *top() {
+
+//        State<T> *firstState = top();
+//        return this->openList.pop();//
         State<T> *firstState = top();
-        return this->openList.pop();
+        return firstState;
     }
 
     //check if the state is empty
     bool isEmpty() {
-        return openList().empty();
+        if(this->openList.empty()){
+            return true;
+        }
+        return false;
     }
 
     //get the size of the queue
@@ -117,7 +128,7 @@ public:
 //    }
     bool replacePathIfShorter(vector<State<T>*> closeVec,State<T> *state) {
         for (const auto &oldState : closeVec) {
-            if(oldState == state && oldState >= state->getCost() ){
+            if(oldState == state && (oldState->getCost() >= state->getCost()) ){
                 //remove the old state with the long path
                 this->erase(oldState);
                 //add the sort path
@@ -149,15 +160,7 @@ public:
         }
     }
 
-    // check if exist
-    bool isExist(State<T> *state) {
-        State<T> *tempState;
-        tempState = this->find(state);
-        if (tempState == nullptr) {
-            return false;
-        }
-        return true;
-    }
+
 
 
 };

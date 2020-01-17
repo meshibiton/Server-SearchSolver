@@ -15,19 +15,20 @@ using namespace  std;
 //template <class T, class Solution>
 class SearcherSolver: public Solver<string,vector<vector<double >>>{
 private:
-    Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher;
+  //  Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher;
 public:
-    SearcherSolver() {
-        //need func that will return the best algo,now its best
-        this->searcher = new BestFirstSearcher<pair<int, int>>();
-//        this->searcher = new DFSSearcher<pair<int, int>>();
-    }
+//    SearcherSolver() {
+//        //need func that will return the best algo,now its best
+//        this->searcher = new BestFirstSearcher<pair<int, int>>();
+////        this->searcher = new DFSSearcher<pair<int, int>>();
+//    }
 
 
     string solve(vector<vector<double >> problem) {
         //create the problem we want, this is for matrix problem
+        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new BestFirstSearcher<pair<int, int>>();
         Searchable<pair<int, int>> *searchable = new Matrix(problem);
-        vector<State<pair<int, int> > *> solution = this->searcher->search(searchable);
+        vector<State<pair<int, int> > *> solution = searcher->search(searchable);
         if (solution.size() == 0) {
             return "No path";
 

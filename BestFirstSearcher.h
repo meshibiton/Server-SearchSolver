@@ -12,12 +12,12 @@
 #include "MyPriorityQueue.h"
 
 template<class T>
-class BestFirstSearcher : public MyPriorityQueue<Solution, T> {
+class BestFirstSearcher : public MyPriorityQueue<T> {
 
 public:
     vector<State<T> *> search(Searchable<T> *searchable) {
 
-        this->numOfNodesEvaluated = 0;
+        this->evaluateNodes = 0;
         //add initial state to the priory Queue
         State<T> *init = searchable->getInitialState();
         State<T> *goal = searchable->getGoalState();
@@ -28,26 +28,25 @@ public:
             //// this->numOfNodesEvaluated++;
             //start with the min state in the queue
             State<T> *minState = this->popOpenList();
-            closeVec.insert(minState);
+            closeVec.push_back(minState);
             //if the state is the goal
             if (searchable->isGoalState(minState)) {
                 return this->reversePath(minState, init);
             }
             //return the all Neighbors
-            vector<State<T> *> statesVecNeighbors = searchable->getAllPossibleStates(minState);
+            vector<State<T> *> statesVecNeighbors = searchable->getAllPossibleState(minState);
             for (State<T> *s : statesVecNeighbors) {
-                if (!containInClose(closeVec, s) && !this->openContains(s)) {
+                if (!this->containInClose(closeVec, s) && !this->openContains(s)) {
                     //add the Neighbor to the queue
                     this->addOpenList(s);
                 } else {
-                    if (!containInClose(closeVec, s)) {
+                    if (!this->containInClose(closeVec, s)) {
                         //if we found shorter path we will replace it
-                        this->replacePathIfShorter(s);
+                        this->replacePathIfShorter(closeVec,s);
                     }
                 }
             }
         }
-        return nullptr;
     }
     ~BestFirstSearcher(){}
 };

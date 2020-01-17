@@ -10,16 +10,13 @@
 #include "Searcher.h"
 
 using namespace  std;
-
-class SearcherAbstract: public Searcher <class T, class Solution>{
+template <class T>
+class SearcherAbstract: public Searcher<T, vector<State<T> *>>{
 protected:
     int evaluateNodes;
 
 
 public:
-    //abstract func
-    virtual Solution search(Searchable<T> *searchable) = 0;
-
     SearcherAbstract() {
         evaluateNodes = 0;
     }
