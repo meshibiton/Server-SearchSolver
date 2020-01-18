@@ -55,7 +55,7 @@ public:
     }
 
     void addOpenList(State<T> *s){
-        this->evaluateNodes++;
+       // this->evaluateNodes++;
         push(s);
     }
 
