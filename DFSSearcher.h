@@ -39,7 +39,7 @@ private:
 
 
     void addOpenList(State<T> *s) {
-        this->evaluateNodes++;
+   //     this->evaluateNodes++;
         openList.push(s);
     }
 
