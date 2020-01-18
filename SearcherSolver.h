@@ -9,7 +9,7 @@
 #include "Matrix.h"
 #include "Searcher.h"
 #include "BestFirstSearcher.h"
-#include "DFSSearcher.h"
+
 
 
 using namespace  std;
@@ -28,7 +28,7 @@ public:
     string solve(vector<vector<double >> problem) {
         //create the problem we want, this is for matrix problem
 //        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new BestFirstSearcher<pair<int, int>>();
-        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new DFSSearcher <pair<int, int>>();
+        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new D <pair<int, int>>();
         Searchable<pair<int, int>> *searchable = new Matrix(problem);
         vector<State<pair<int, int> > *> solution = searcher->search(searchable);
         cout <<  searcher->getNumOfNodesEvaluated()<< endl;
@@ -59,7 +59,7 @@ public:
                 solutionString = solutionString + "Up";
             }
             //if the column became less that means we go left
-            if (nextMove.first < curPlace.first) {
+            if (nextMove.second < curPlace.second) {
                 solutionString = solutionString + "Left";
             }
             solutionString = solutionString + "(" + cost + ")";
