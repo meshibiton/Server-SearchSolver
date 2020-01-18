@@ -63,15 +63,8 @@ private:
         return flag;
     }
 
-////////////////////////////////////////////put in SearcherA
-//
-//    bool containInClose(vector<State<T>*> closeVec,State<T> *s) {
-//        for (const auto &state : closeVec) {
-//            if(closeVec == s)
-//                return true;
-//        }
-//        return false;
-//    }
+
+
 
 public:
     vector<State<T> *> search(Searchable<T> *searchable) {
