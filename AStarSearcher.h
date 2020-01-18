@@ -12,7 +12,7 @@
 #include "MyPriorityQueue.h"
 
 template<class T>
-class AStarSearcher : public MyPriorityQueue<Solution, T> {
+class AStarSearcher : public MyPriorityQueue<T> {
 
 public:
     vector<State<T> *> search(Searchable<T> *searchable) {
@@ -25,7 +25,7 @@ public:
         vector<State<T> *> closeVec;
         //if there is not any other State in the queue
         while (!this->isEmpty()) {
-            //// this->numOfNodesEvaluated++;
+             this->addNumOfNodesEvaluated();
             //start with the min state in the queue
             State<T> *minState = this->popOpenList();
             closeVec.insert(minState);

@@ -66,6 +66,7 @@ public:
         this->addOpenList(searchable->getInitialState());
         //while ther are nod in the queue continue
         while (this->openListSize() > 0) {
+            this->addNumOfNodesEvaluated();
             State<T> *curState = this->popOpenList();
             //check if exist in the visited nod
             if (!this->containsClose(closeVec, curState))

@@ -25,6 +25,10 @@ public:
     int getNumOfNodesEvaluated() {
         return this->evaluateNodes;
     }
+    //for the algo
+    int addNumOfNodesEvaluated() {
+        this->evaluateNodes++;
+    }
 
 
     //return the reverse path
