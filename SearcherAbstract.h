@@ -25,6 +25,9 @@ public:
     int getNumOfNodesEvaluated() {
         return this->evaluateNodes;
     }
+    void zeroNumOfNodesEvaluated() {
+        this->evaluateNodes = 0;
+    }
     //for the algo
     int addNumOfNodesEvaluated() {
         this->evaluateNodes++;

@@ -6,13 +6,15 @@
 #define FINALPROJECTPART2_BFSSEARCHER_H
 
 
+#include <iostream>
+#include <queue>
 #include "SearcherAbstract.h"
 
 using namespace std;
-#include <queue>
+
 template <class T>
-// An abstract class
-class BFSSearcher: SearcherAbstract{
+
+class BFSSearcher: public SearcherAbstract<T>  {
 private:
 
     queue<State<T>*> openList;
@@ -60,8 +62,8 @@ public:
 
     vector<State<T> *> search(Searchable<T> *searchable) {
         //initial with 0
-        this->evaluateNodes = 0;
-        vector<State<T>*> closeVec;
+        this->zeroNumOfNodesEvaluated();
+        vector<State<T> *> closeVec;
         //add the init to the queue
         this->addOpenList(searchable->getInitialState());
         //while ther are nod in the queue continue
@@ -82,7 +84,9 @@ public:
                 }
             }
         }
-        return nullptr;
+        vector<State<T> *> emptyVec;
+        //there is not path
+        return emptyVec;
     }
 
 

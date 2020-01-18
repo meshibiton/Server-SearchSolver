@@ -17,7 +17,7 @@ class AStarSearcher : public MyPriorityQueue<T> {
 public:
     vector<State<T> *> search(Searchable<T> *searchable) {
 
-        this->numOfNodesEvaluated = 0;
+        this->zeroNumOfNodesEvaluated();
         //add initial state to the priory Queue
         State<T> *init = searchable->getInitialState();
         State<T> *goal = searchable->getGoalState();
@@ -28,15 +28,16 @@ public:
              this->addNumOfNodesEvaluated();
             //start with the min state in the queue
             State<T> *minState = this->popOpenList();
-            closeVec.insert(minState);
+            closeVec.push_back(minState);
             //if the state is the goal
             if (searchable->isGoalState(minState)) {
                 return this->reversePath(minState, init);
             }
+
             //return the all Neighbors
-            vector<State<T> *> statesVecNeighbors = searchable->getAllPossibleStates(minState);
+            vector<State<T> *> statesVecNeighbors = searchable->getAllPossibleState(minState);
             for (State<T> *s : statesVecNeighbors) {
-                if (!containInClose(closeVec, s) && !this->openContains(s)) {
+                if (!this->containInClose(closeVec, s) && !this->openContains(s)) {
                     //add the Neighbor to the queue
                     this->addOpenList(s);
                     //if not in the open list
@@ -44,20 +45,23 @@ public:
                     {
                         //find the  other option and check and check if they chipper
                         //then the exist node
-                        State<T> *otherState = find(s);
-                        if (otherState->getCost() < minState->getCost()) {
-                            //remove the old state with the long path
-                            this->erase(minState);
-                            //add the sort path
-                            this->addOpenList(s);
+                        State<T> *otherState = this->find(s);
+                        if (otherState != NULL) {
+                            if (otherState->getCost() < minState->getCost()) {
+                                //remove the old state with the long path
+                                this->erase(minState);
+                                //add the sort path
+                                this->addOpenList(s);
+                            }
                         }
                     }
                 }
 
             }
         }
+        vector<State<T> *> emptyVec;
         //there is not path
-        return nullptr;
+        return emptyVec;
 
     }
 

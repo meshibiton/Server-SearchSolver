@@ -17,7 +17,7 @@ class BestFirstSearcher : public MyPriorityQueue<T> {
 public:
     vector<State<T> *> search(Searchable<T> *searchable) {
 
-        this->evaluateNodes = 0;
+        this->zeroNumOfNodesEvaluated();
         //add initial state to the priory Queue
         State<T> *init = searchable->getInitialState();
         State<T> *goal = searchable->getGoalState();
@@ -47,6 +47,9 @@ public:
                 }
             }
         }
+        vector<State<T> *> emptyVec;
+        //there is not path
+        return emptyVec;
     }
     ~BestFirstSearcher(){}
 };
