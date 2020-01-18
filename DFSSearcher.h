@@ -6,6 +6,7 @@
 #define FINALPROJECTPART2_DFSSEARCHER_H
 
 
+
 #include <stack>
 #include "SearcherAbstract.h"
 
@@ -39,7 +40,7 @@ private:
 
 
     void addOpenList(State<T> *s) {
-   //     this->evaluateNodes++;
+        //     this->evaluateNodes++;
         openList.push(s);
     }
 
