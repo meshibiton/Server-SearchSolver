@@ -1,5 +1,5 @@
 # Solve matrix shortest path 
-> our program test which algo is the most optimally for finding the shortest path (BFS / DFS /BestFs /A*).
+> our program test which algo is the most optimally for finding the shortest path (BFS / DFS / BestFs /A*).
 
 ## Table of contents
 * [General info](#general-info)
@@ -9,7 +9,7 @@
 * [Link](#link-to-the-project)
 
 ## General info
-This project test 4 alog:BFS,DFS,A*,BestFS,each alog tested by 10 different matrices. 
+This project test 4 alog: BFS, DFS, A*, BestFS. each alog tested by 10 different matrices. 
 
 The algorithm examines and print the cost of the path he chosed,the number of vertices 
 
@@ -22,7 +22,7 @@ he passed and the path itself(DOWN/UP/RIGHT/LEFT).
 
 1. Notice: 5600 will be the port the server gonna listen for clients.
 
-2. open terminal in the python tester("parallel_tester.py" ) folder and write "python2 parallel_tester.py"
+2. Open terminal in the python tester("parallel_tester.py" ) folder and write "python2 parallel_tester.py"
 
 3. In our tester folder there is 10 different matrices txt files that will be read by the program.
    
