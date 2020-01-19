@@ -79,18 +79,21 @@ public:
             this->addNumOfNodesEvaluated();
             //pop the the father state
             State<T> *minState = this->popOpenList();
+            pair<int,int> number=minState->getState();
+            string pair="("+to_string(number.first)+","+to_string(number.second)+")";
+            cout<<pair<<endl;
             if (searchable->isGoalState(minState)) {
                 return this->reversePath(minState, searchable->getInitialState());
             }
             // check if the state already visited
-            if (!this->containInClose(closeVec, minState)) {
+            if (!this->containInClose(closeVec, minState) && !this->openContains(minState)){
                 closeVec.push_back(minState);
                 vector<State<T> *> statesVecNeighbors = searchable->getAllPossibleState(minState);
                 for (State<T> *tempState : statesVecNeighbors) {
                     //     if (!this->containInClose(closeVec, tempState) && !this->openContains(tempState)) {
                     this->addOpenList(tempState);
                 }
-            } else {
+            }else {
                 delete (minState);
             }
         }
