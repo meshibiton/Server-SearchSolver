@@ -10,6 +10,7 @@
 #include "Searcher.h"
 #include "BestFirstSearcher.h"
 #include "BFSSearcher.h"
+#include "DFSSearcher.h"
 
 
 
@@ -29,7 +30,7 @@ public:
     string solve(vector<vector<double >> problem) {
         //create the problem we want, this is for matrix problem
 //        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new BestFirstSearcher<pair<int, int>>();
-        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new BFSSearcher <pair<int, int>>();
+        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new DFSSearcher <pair<int, int>>();
         Searchable<pair<int, int>> *searchable = new Matrix(problem);
         vector<State<pair<int, int> > *> solution = searcher->search(searchable);
         cout <<  searcher->getNumOfNodesEvaluated()<< endl;

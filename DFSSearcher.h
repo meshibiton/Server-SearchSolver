@@ -6,7 +6,6 @@
 #define FINALPROJECTPART2_DFSSEARCHER_H
 
 
-
 #include <stack>
 #include "SearcherAbstract.h"
 
@@ -65,8 +64,6 @@ private:
     }
 
 
-
-
 public:
     vector<State<T> *> search(Searchable<T> *searchable) {
         //initialize with 0
@@ -79,36 +76,73 @@ public:
             this->addNumOfNodesEvaluated();
             //pop the the father state
             State<T> *minState = this->popOpenList();
-            pair<int,int> number=minState->getState();
-            string pair="("+to_string(number.first)+","+to_string(number.second)+")";
-            cout<<pair<<endl;
+            pair<int, int> number = minState->getState();
+            string pair = "(" + to_string(number.first) + "," + to_string(number.second) + ")";
+            cout << pair << endl;
+            // check if the state already visited
+            if (!this->containInClose(closeVec, minState)) {
+                closeVec.push_back(minState);
+            }
+
             if (searchable->isGoalState(minState)) {
                 return this->reversePath(minState, searchable->getInitialState());
             }
-            // check if the state already visited
-            if (!this->containInClose(closeVec, minState) && !this->openContains(minState)){
-                closeVec.push_back(minState);
-                vector<State<T> *> statesVecNeighbors = searchable->getAllPossibleState(minState);
-                for (State<T> *tempState : statesVecNeighbors) {
-                    //     if (!this->containInClose(closeVec, tempState) && !this->openContains(tempState)) {
+
+            vector<State<T> *> statesVecNeighbors = searchable->getAllPossibleState(minState);
+            for (State<T> *tempState : statesVecNeighbors) {
+                if (!this->containInClose(closeVec, tempState) && !this->openContains(tempState)) {
                     this->addOpenList(tempState);
                 }
-            }else {
-                delete (minState);
             }
+
         }
         vector<State<T> *> emptyVec;
         //there is not path
         return emptyVec;
 
     }
+//    public:
+//    vector<State<T> *> search(Searchable<T> *searchable) {
+//        //initialize with 0
+//        this->zeroNumOfNodesEvaluated();
+//        vector<State<T> *> closeVec;
+//        //add the initial stat to the stack
+//        this->addOpenList(searchable->getInitialState());
+//        //run on the graph until there are no state in the stack
+//        while (openListSize() > 0) {
+//            this->addNumOfNodesEvaluated();
+//            //pop the the father state
+//            State<T> *minState = this->popOpenList();
+//            pair<int,int> number=minState->getState();
+//            string pair="("+to_string(number.first)+","+to_string(number.second)+")";
+//            cout<<pair<<endl;
+//            if (searchable->isGoalState(minState)) {
+//                return this->reversePath(minState, searchable->getInitialState());
+//            }
+//            // check if the state already visited
+//            if (!this->containInClose(closeVec, minState) && !this->openContains(minState)){
+//                closeVec.push_back(minState);
+//                vector<State<T> *> statesVecNeighbors = searchable->getAllPossibleState(minState);
+//                for (State<T> *tempState : statesVecNeighbors) {
+//                    if (!this->containInClose(closeVec, tempState) && !this->openContains(tempState)) {
+//                        this->addOpenList(tempState);
+//                    }
+//                }
+//            }else {
+//                delete (minState);
+//            }
+//        }
+//        vector<State<T> *> emptyVec;
+//        //there is not path
+//        return emptyVec;
+//
+//    }
 
 
     ~DFSSearcher() {}
 
 
 };
-
 
 
 #endif //FINALPROJECTPART2_DFSSEARCHER_H
