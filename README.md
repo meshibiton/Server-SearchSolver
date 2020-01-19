@@ -23,6 +23,8 @@ he passed and the path itself(DOWN/UP/RIGHT/LEFT).
 1. Notice: 5600 will be the port the server gonna listen for clients.
 
 2. open terminal in the python tester("parallel_tester.py" ) folder and write "python2 parallel_tester.py"
+
+3. In our tester folder there is 10 different matrices txt files that will be read by the program.
    
 4. To compile your code open your terminal and write:
 
