@@ -3,7 +3,7 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Graph](#screenshots)
+* [Graph - analyzes run time algo](#Graph-analyzes-run-time-algo)
 * [Setup](#setup)
 * [Status](#status)
 * [Link](#link-to-the-project)
@@ -15,7 +15,7 @@ The algorithm examines and print the cost of the path he chosed,the number of ve
 
 he passed and the path itself(DOWN/UP/RIGHT/LEFT).
 
-## Screenshots
+## Graph - analyzes run time algo
 ![Example screenshot](./img/fly2.jpeg)
 
 ## Setup 
