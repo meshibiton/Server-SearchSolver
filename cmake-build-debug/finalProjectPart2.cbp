@@ -93,9 +93,6 @@
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/BestFirstSearcher.h">
 			<Option target="finalProjectPart2"/>
 		</Unit>
-		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/BestFirstSearcher1.h">
-			<Option target="finalProjectPart2"/>
-		</Unit>
 		<Unit filename="/home/raph/CLionProjects/finalProjectPart2/CacheManager.h">
 			<Option target="finalProjectPart2"/>
 		</Unit>

@@ -28,6 +28,7 @@ CMakeFiles/finalProjectPart2.dir/StringReverser.cpp.o: ../Solver.h
 CMakeFiles/finalProjectPart2.dir/StringReverser.cpp.o: ../StringReverser.cpp
 CMakeFiles/finalProjectPart2.dir/StringReverser.cpp.o: ../StringReverser.h
 
+CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../BFSSearcher.h
 CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../BestFirstSearcher.h
 CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../CacheManager.h
 CMakeFiles/finalProjectPart2.dir/main.cpp.o: ../ClientHandler.h

@@ -25,14 +25,20 @@ private:
 
     bool openContains(State<T> *state) {
 
-        return  isExist(*state);
+        return  isExist(state);
     }
-    State<T>* popOpenList(){
-        return  openList.pop();
+    State<T> *popOpenList() {
+        return pop();
+    }
+
+    State<T> *pop() {
+        State<T> *firstState = openList.front();
+        this->openList.pop();
+        return firstState;
     }
 
     void addOpenList(State<T> *s){
-        this->evaluateNodes++;
+//        this->evaluateNodes++;
         openList.push(s);
     }
 
@@ -70,18 +76,32 @@ public:
         while (this->openListSize() > 0) {
             this->addNumOfNodesEvaluated();
             State<T> *curState = this->popOpenList();
-            //check if exist in the visited nod
-            if (!this->containsClose(closeVec, curState))
-                closeVec.push_back(curState);
 
-            if (searchable->isGoalState(curState))
+            if (searchable->isGoalState(curState)) {
                 return this->reversePath(curState, searchable->getInitialState());
+            }
+
+//            //check if exist in the visited nod
+//            if (!this->containInClose(closeVec, curState)) {
+//                closeVec.push_back(curState);
+//            }
+
             //return the all Neighbors
-            vector<State<T>*> statesVec = searchable->getAllPossibleStates(curState);
+            vector<State<T>*> statesVec = searchable->getAllPossibleState(curState);
             for (State<T> *s : statesVec) {
-                if (!this->containsClose(closeVec, s) && !this->openContains(s)) {
+                //check if exist in the visited nod
+                if (!this->containInClose(closeVec, s)) {
+                    // add to the queue
                     this->addOpenList(s);
+                    // add to the visted node vector
+                    closeVec.push_back(s);
                 }
+
+
+
+//                if (!this->containInClose(closeVec, s) && !this->openContains(s)) {
+
+
             }
         }
         vector<State<T> *> emptyVec;
