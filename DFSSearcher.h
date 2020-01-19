@@ -90,7 +90,7 @@ public:
 
             vector<State<T> *> statesVecNeighbors = searchable->getAllPossibleState(minState);
             for (State<T> *tempState : statesVecNeighbors) {
-                if (!this->containInClose(closeVec, tempState) && !this->openContains(tempState)) {
+                if (!this->containInClose(closeVec, tempState)) {
                     this->addOpenList(tempState);
                 }
             }
