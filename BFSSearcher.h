@@ -72,7 +72,8 @@ public:
         vector<State<T> *> closeVec;
         //add the init to the queue
         this->addOpenList(searchable->getInitialState());
-        //while ther are nod in the queue continue
+        closeVec.push_back(searchable->getInitialState());
+        //while there are nod in the queue continue
         while (this->openListSize() > 0) {
             this->addNumOfNodesEvaluated();
             State<T> *curState = this->popOpenList();
@@ -80,12 +81,6 @@ public:
             if (searchable->isGoalState(curState)) {
                 return this->reversePath(curState, searchable->getInitialState());
             }
-
-//            //check if exist in the visited nod
-//            if (!this->containInClose(closeVec, curState)) {
-//                closeVec.push_back(curState);
-//            }
-
             //return the all Neighbors
             vector<State<T>*> statesVec = searchable->getAllPossibleState(curState);
             for (State<T> *s : statesVec) {
