@@ -12,30 +12,32 @@ using namespace  std;
 
 
 bool FileCacheManager::isExist(string problem){
-
-
+    pthread_mutex_lock(&mutex);
     if (this->mapCachProblem.find(problem) ==  this->mapCachProblem.end()){
+        pthread_mutex_unlock(&mutex);
         return false;
+
     } else{
         return true;
     }
+
 }
 
 
 
 
 void FileCacheManager::pushSolution(string problem, string solution) {
-    std::mutex mutex;
+    pthread_mutex_lock(&mutex);
     int nameFile = hashFunc(problem);
     cout<<"kkkk"+to_string(nameFile)<<endl;
     //write to file
     std::ofstream outfile (to_string (nameFile)+".txt");
     outfile << solution << std::endl;
     outfile.close();
-    mutex.lock();
-    //map string problenm to file name
+    //map string problem to file name
     this->mapCachProblem[problem] = to_string(nameFile)+".txt";
-    mutex.unlock();
+    pthread_mutex_unlock(&mutex);
+
 
 }
 string FileCacheManager::popSolution(string problem){
@@ -58,9 +60,9 @@ string FileCacheManager::popSolution(string problem){
 int FileCacheManager::hashFunc(string line){
     std::hash<std::string> hasher;
     auto hashed = hasher(line); //returns std::size_t
-    std::cout << hashed << '\n';
+//    std::cout << hashed << '\n';
 
 }
 FileCacheManager::~FileCacheManager(){
-
+    pthread_mutex_destroy(&mutex);
 }

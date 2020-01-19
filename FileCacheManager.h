@@ -19,6 +19,7 @@ class FileCacheManager : public CacheManager{
 // Data members of class
 private:
     unordered_map<string, string> mapCachProblem;
+    pthread_mutex_t mutex;
 
 public:
 // Pure Virtual Function

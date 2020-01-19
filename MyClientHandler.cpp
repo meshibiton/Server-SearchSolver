@@ -70,7 +70,7 @@ void MyClientHandler::handlerClient(int socket) {
         //is we can read from the socket
         if (valread && valread != -1) {
             str = buffer;
-            std::cout << buffer << std::endl;
+//            std::cout << buffer << std::endl;
             //substr the first line mybe she isn"t completly
             isExist = str.find("end");
             if (isExist != -1) {

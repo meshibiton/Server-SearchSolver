@@ -77,8 +77,8 @@ public:
             //pop the the father state
             State<T> *minState = this->popOpenList();
             pair<int, int> number = minState->getState();
-            string pair = "(" + to_string(number.first) + "," + to_string(number.second) + ")";
-            cout << pair << endl;
+//            string pair = "(" + to_string(number.first) + "," + to_string(number.second) + ")";
+//            cout << pair << endl;
             // check if the state already visited
             if (!this->containInClose(closeVec, minState)) {
                 closeVec.push_back(minState);
