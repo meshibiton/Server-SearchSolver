@@ -7,7 +7,9 @@
 #include <bits/stdc++.h>
 #include "FileCacheManager.h"
 
+
 using namespace  std;
+
 
 bool FileCacheManager::isExist(string problem){
 
@@ -18,15 +20,22 @@ bool FileCacheManager::isExist(string problem){
         return true;
     }
 }
+
+
+
+
 void FileCacheManager::pushSolution(string problem, string solution) {
+    std::mutex mutex;
     int nameFile = hashFunc(problem);
     cout<<"kkkk"+to_string(nameFile)<<endl;
     //write to file
     std::ofstream outfile (to_string (nameFile)+".txt");
     outfile << solution << std::endl;
     outfile.close();
+    mutex.lock();
     //map string problenm to file name
     this->mapCachProblem[problem] = to_string(nameFile)+".txt";
+    mutex.unlock();
 
 }
 string FileCacheManager::popSolution(string problem){
