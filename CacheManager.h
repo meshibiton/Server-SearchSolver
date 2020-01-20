@@ -11,18 +11,24 @@
 #include<iterator>
 #include <unordered_map>
 
-using namespace  std;
-class CacheManager {
-// Data members of class
+using namespace std;
 
+class CacheManager {
 
 
 public:
 // Pure Virtual Function
-    virtual bool isExist (string) = 0;
+//virtual void updateMap(string problem,string nameFile);
+    virtual bool isExitFile(string problem)=0;
+    virtual int hashFunc(string) = 0;
+
+    virtual bool isExist(string) = 0;
+
     virtual void pushSolution(string, string) = 0;
-    virtual string popSolution (string) = 0;
-    virtual ~CacheManager(){}
+
+    virtual string popSolution(string) = 0;
+
+    virtual ~CacheManager() {}
 /* Other members */
 
 };

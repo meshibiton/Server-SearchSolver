@@ -81,8 +81,11 @@ void MyClientHandler::handlerClient(int socket) {
                 //call function we have problem to solve
                 if (this->cacheManager->isExist(lineProblem)) {
                     solution = this->cacheManager->popSolution(lineProblem);
-
-                } else {
+                }
+                //there is a solution in directory
+                else if(this->cacheManager->isExitFile(lineProblem)){
+                    solution=this->cacheManager->popSolution(lineProblem);
+                }else {
                     //creat the matrix solution
                     vSolution = fromStringToVec(lineProblem);
                     solution = solver->solve(vSolution);

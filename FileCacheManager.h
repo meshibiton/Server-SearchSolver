@@ -22,11 +22,12 @@ private:
     pthread_mutex_t mutex;
 
 public:
-// Pure Virtual Function
+//    void updateMap(string problem,string nameFile);
+    bool isExitFile(string problem);
+    int hashFunc(string);
     bool isExist (string);
     void pushSolution(string, string);
     string popSolution (string);
-    int hashFunc(string line);
      ~FileCacheManager();
     /* Other members */
 

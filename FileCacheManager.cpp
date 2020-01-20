@@ -22,8 +22,16 @@ bool FileCacheManager::isExist(string problem){
     }
 
 }
-
-
+bool FileCacheManager::isExitFile(string problem) {
+    int nameFile=FileCacheManager::hashFunc(problem);
+    string fileName=to_string(nameFile)+".txt";
+    std::ifstream infile(fileName);
+    if(infile.good()){
+        //if yes we will update our cache
+        this->mapCachProblem[problem] = fileName;
+    }
+    return infile.good();
+}
 
 
 void FileCacheManager::pushSolution(string problem, string solution) {
@@ -56,6 +64,10 @@ string FileCacheManager::popSolution(string problem){
 
     return solution ;
 }
+//void FileCacheManager::updateMap(string problem, string nameFile) {
+//
+//}
+
 
 int FileCacheManager::hashFunc(string line){
     std::hash<std::string> hasher;
