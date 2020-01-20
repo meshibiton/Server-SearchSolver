@@ -43,14 +43,14 @@ private:
         openList.push(s);
     }
 
-    bool isExist(State<T> *state) {
+    bool isExist(State<T> *state1) {
         vector<State<T> *> vecStates;
         State<T> *tempState;
         bool flag = false;
         //pop all the state from the queue and check if the state exist
         while (!openList.empty()) {
             tempState = this->pop();
-            if (*tempState == *state) {
+            if (*tempState == *state1) {
                 flag = true;
             } else {
                 vecStates.push_back(tempState);
@@ -76,7 +76,7 @@ public:
             this->addNumOfNodesEvaluated();
             //pop the the father state
             State<T> *minState = this->popOpenList();
-            pair<int, int> number = minState->getState();
+//            pair<int, int> number = minState->getState();
 //            string pair = "(" + to_string(number.first) + "," + to_string(number.second) + ")";
 //            cout << pair << endl;
             // check if the state already visited

@@ -89,6 +89,8 @@ void MyClientHandler::handlerClient(int socket) {
                     this->cacheManager->pushSolution(lineProblem, solution);
                 }
                 cout << solution << endl;
+                // Send message
+                write(socket, solution.c_str(), solution.length());
                 close(socket);
                 //out from the loop
                 stopRead = true;

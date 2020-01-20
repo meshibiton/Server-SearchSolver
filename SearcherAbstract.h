@@ -29,7 +29,7 @@ public:
         this->evaluateNodes = 0;
     }
     //for the algo
-    int addNumOfNodesEvaluated() {
+    void addNumOfNodesEvaluated() {
         this->evaluateNodes++;
     }
 

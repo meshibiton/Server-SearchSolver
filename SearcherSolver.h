@@ -31,7 +31,7 @@ public:
     string solve(vector<vector<double >> problem) {
         //create the problem we want, this is for matrix problem
 //        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new BestFirstSearcher<pair<int, int>>();
-        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new AStarSearcher <pair<int, int>>();
+        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new BestFirstSearcher <pair<int, int>>();
         Searchable<pair<int, int>> *searchable = new Matrix(problem);
         vector<State<pair<int, int> > *> solution = searcher->search(searchable);
         cout <<  searcher->getNumOfNodesEvaluated()<< endl;
@@ -44,7 +44,7 @@ public:
     }
     string FromVecToString(vector<State<pair<int, int> > *> solution) {
         string solutionString = "";
-        int i;
+        unsigned  i;
         for (i = 0; i < solution.size()-1 ; i++) {
             pair<int, int> curPlace = solution[i]->getState();
             pair<int, int> nextMove = solution[i + 1]->getState();

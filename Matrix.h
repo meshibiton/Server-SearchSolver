@@ -22,21 +22,21 @@ private:
     int numRows;
     int numColumn;
 public:
-    Matrix(const vector<vector<double >> &matrix) {
+    Matrix(const vector<vector<double >> &matrix1) {
         //num of vectors in the vector of vectores
-        this->numRows = matrix.size() -2;
+        this->numRows = matrix1.size() -2;
         //num of element in each vector
-        this->numColumn = matrix[0].size();
+        this->numColumn = matrix1[0].size();
         //first we take the values pair of start and end points,means row and column
-        pair<int, int> PairInitialState = {(int) matrix[numRows ][0], (int) matrix[numRows ][1]};
-        pair<int, int> PairGoalState = {(int) matrix[numRows + 1][0], (int) matrix[numRows + 1][1]};
+        pair<int, int> PairInitialState = {(int) matrix1[numRows ][0], (int) matrix1[numRows ][1]};
+        pair<int, int> PairGoalState = {(int) matrix1[numRows + 1][0], (int) matrix1[numRows + 1][1]};
         //we save the cost in var which is exactly the value in the cell in the matrix
-        double costGoal = matrix[PairGoalState.first][PairGoalState.second];
-        double costInitial = matrix[PairInitialState.first][PairInitialState.second];
+        double costGoal = matrix1[PairGoalState.first][PairGoalState.second];
+        double costInitial = matrix1[PairInitialState.first][PairInitialState.second];
         //create the object of goal and initial state
         this->goalState = new State<pair<int, int>>(PairGoalState, costGoal , nullptr);
         this->initialState = new State<pair<int, int>>(PairInitialState, costInitial, nullptr);
-        this->matrix = matrix;
+        this->matrix = matrix1;
     }
 
     //check whether its the goal or not

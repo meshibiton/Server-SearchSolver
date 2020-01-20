@@ -61,6 +61,7 @@ int FileCacheManager::hashFunc(string line){
     std::hash<std::string> hasher;
     auto hashed = hasher(line); //returns std::size_t
 //    std::cout << hashed << '\n';
+    return hashed;
 
 }
 FileCacheManager::~FileCacheManager(){

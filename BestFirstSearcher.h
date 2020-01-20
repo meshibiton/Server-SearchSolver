@@ -20,7 +20,7 @@ public:
         this->zeroNumOfNodesEvaluated();
         //add initial state to the priory Queue
         State<T> *init = searchable->getInitialState();
-        State<T> *goal = searchable->getGoalState();
+       // State<T> *goal = searchable->getGoalState();
         this->addOpenList(init);
         vector<State<T> *> closeVec;
         //if there is not any other State in the queue

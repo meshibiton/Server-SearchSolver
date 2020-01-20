@@ -42,14 +42,14 @@ private:
         openList.push(s);
     }
 
-    bool isExist(State<T> *state) {
+    bool isExist(State<T> *state1) {
         vector<State<T> *> vecStates;
         State<T> *tempState;
         bool flag = false;
         //pop all the state from the queue and check if the state exist
         while (!openList.empty()) {
             tempState = this->popOpenList();
-            if (*tempState == *state) {
+            if (*tempState == *state1) {
                 flag = true;
             } else {
                 vecStates.push_back(tempState);
@@ -77,7 +77,9 @@ public:
         while (this->openListSize() > 0) {
             this->addNumOfNodesEvaluated();
             State<T> *curState = this->popOpenList();
-
+//            pair<int,int> number=curState->getState();
+//            string pair="("+to_string(number.first)+","+to_string(number.second)+")";
+//            cout<<pair<<endl;
             if (searchable->isGoalState(curState)) {
                 return this->reversePath(curState, searchable->getInitialState());
             }

@@ -15,10 +15,10 @@ private:
     double cost;//cost to reach this state(set by setter)
     State<T> *camefrom;//the state we came from to this state(setter)
 public:
-    State<T>(T state,double cost,State<T> *came) {
-        this->state=state;
-        this->cost=cost;
-        this->camefrom=came;
+    State<T>(T state1,double cost1,State<T> *came1) {
+        this->state=state1;
+        this->cost=cost1;
+        this->camefrom=came1;
     }
 
     T getState() const {
@@ -31,8 +31,8 @@ public:
 
 
 
-    bool equals(State<T> *state){
-        return this->state == state->state;
+    bool equals(State<T> *state1){
+        return this->state == state1->state;
     }
     void setState(T state);
 
@@ -48,13 +48,13 @@ public:
 };
 
 template<class T>
-void State<T>::setState(T state) {
-    State::state = state;
+void State<T>::setState(T state1) {
+    State::state = state1;
 }
 
 template<class T>
-void State<T>::setCost(double cost) {
-    State::cost = cost;
+void State<T>::setCost(double cost1) {
+    State::cost = cost1;
 }
 
 template<class T>
@@ -68,8 +68,8 @@ State<T> *State<T>::getCamefrom() const {
 }
 
 template<class T>
-void State<T>::setCamefrom(State<T> *camefrom) {
-    State::camefrom = camefrom;
+void State<T>::setCamefrom(State<T> *camefrom1) {
+    State::camefrom = camefrom1;
 }
 
 

@@ -89,6 +89,5 @@ void MyParallelServer::open(int port, ClientHandler *clientHandler) {
 
 
 void MyParallelServer::stop() {
-
-    // parallelStop = true;
+     parallelStop = true;
 }

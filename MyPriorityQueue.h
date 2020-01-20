@@ -113,8 +113,8 @@ public:
             }
         }
         //return the queue to the first state
-        for (const auto &state : vecStates) {
-            this->push(state);
+        for (const auto &state1 : vecStates) {
+            this->push(state1);
         }
         return returnState;
     }
@@ -126,7 +126,7 @@ public:
 //        }
 //        return false;
 //    }
-    bool replacePathIfShorter(vector<State<T>*> closeVec,State<T> *state) {
+    void replacePathIfShorter(vector<State<T>*> closeVec,State<T> *state) {
         for (const auto &oldState : closeVec) {
             if(oldState == state && (oldState->getCost() >= state->getCost()) ){
                 //remove the old state with the long path
@@ -140,15 +140,14 @@ public:
     }
 
 
-    void erase(State<T> *state) {
+    void erase(State<T> *state1) {
         vector<State<T> *> vecStates;
         State<T> *tempState;
         //pop all the state from the queue and check if the state exist
         while (!isEmpty()) {
             tempState = this->pop();
-            if (*tempState == *state) {
-                free(state);
-                delete (state);
+            if (*tempState == *state1) {
+                delete (state1);
                 break;
             } else {
                 vecStates.push_back(tempState);
