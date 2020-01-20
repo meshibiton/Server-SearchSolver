@@ -20,13 +20,13 @@ he passed and the path itself(DOWN/UP/RIGHT/LEFT).
 
 ## Setup 
 
-1. :pencil: Notice: 5600 will be the port the server gonna listen for clients.
+1. :pencil: Notice: 5600 will be the port the server is going to listen to clients.
 
-2. Open terminal in the python tester("parallel_tester.py" ) folder and write "python2 parallel_tester.py"
+2. Open terminal in the python tester folder and write "python2 parallel_tester.py"
 
 3. In our tester folder there is 10 different matrices txt files that will be read by the program.
    
-4. To compile your code open your terminal and write:
+4. To compile your code open your terminal(another) and write:
 
    g++ -std=c++14 *.cpp -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -o a.out -pthread
 
@@ -35,6 +35,8 @@ he passed and the path itself(DOWN/UP/RIGHT/LEFT).
    ./a.out port
    
    in our case the port number is : 5600
+   
+ 6.Then ,finally click enter in the python terminal and you should receive a solution.
 
 ## Status
 Project is:  in progress.
