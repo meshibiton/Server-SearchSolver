@@ -20,7 +20,7 @@ he passed and the path itself(DOWN/UP/RIGHT/LEFT).
 
 ## Setup 
 
-1. Notice: 5600 will be the port the server gonna listen for clients.
+1. Notice:exclamation: 5600 will be the port the server gonna listen for clients.
 
 2. Open terminal in the python tester("parallel_tester.py" ) folder and write "python2 parallel_tester.py"
 
