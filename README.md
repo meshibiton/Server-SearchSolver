@@ -1,4 +1,4 @@
-# Solve matrix shortest path 
+# Solve matrix shortest path :arrows_clockwise:
 > our program test which algo is the most optimally for finding the shortest path (BFS / DFS / BestFs /A*).
 
 ## Table of contents
@@ -20,7 +20,7 @@ he passed and the path itself(DOWN/UP/RIGHT/LEFT).
 
 ## Setup 
 
-1. Notice:exclamation: 5600 will be the port the server gonna listen for clients.
+1. :pencil: Notice: 5600 will be the port the server gonna listen for clients.
 
 2. Open terminal in the python tester("parallel_tester.py" ) folder and write "python2 parallel_tester.py"
 
