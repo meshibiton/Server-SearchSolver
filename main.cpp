@@ -13,8 +13,8 @@ int main(int argc, char *argv[]) {
 
         MyClientHandler *myClientHandler = new MyClientHandler(new SearcherSolver(), fileCacheManager);
 //        myClientHandler->handlerClient(5600);
-        //  Server *server = new MyParallelServer();
-        Server *server = new MySerialServer();
+         Server *server = new MyParallelServer();
+        //Server *server = new MySerialServer();
         server->open(stoi(argv[1]), myClientHandler);
         //  server->open(atoi(argv[1]), myClientHandler);
 //        this_thread::sleep_for(chrono::microseconds(100000));

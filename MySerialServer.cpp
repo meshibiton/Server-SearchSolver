@@ -54,7 +54,7 @@ void MySerialServer::serverSide(int socketfd, ClientHandler *clientHandler) {
         }
         //before doing accept we will declare the time we are gonna waite before time-out
         struct timeval tv;
-        tv.tv_sec = 10;
+        tv.tv_sec = 120;
         tv.tv_usec = 0;
         setsockopt(socketfd, SOL_SOCKET, SO_RCVTIMEO, (const char *) &tv, sizeof tv);
         //it time out occured
