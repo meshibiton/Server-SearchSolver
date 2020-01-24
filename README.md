@@ -16,7 +16,7 @@ The algorithm examines and print the cost of the path he chosed,the number of ve
 he passed and the path itself(DOWN/UP/RIGHT/LEFT).
 
 ## Graph - analyzes run time algo
-[**click here**](https://github.com/meshibiton/finalProjectPart2/results)
+[**click here**](https://github.com/meshibiton/finalProjectPart2/results.pdf)
 
 ## Setup 
 
