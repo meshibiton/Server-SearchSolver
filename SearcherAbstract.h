@@ -21,7 +21,7 @@ public:
         evaluateNodes = 0;
     }
 
-    //for the algo
+    //get the num of nodes that the algorithm already visited
     int getNumOfNodesEvaluated() {
         return this->evaluateNodes;
     }
@@ -51,6 +51,7 @@ public:
 
         return shortPath;
     }
+
     bool containInClose(vector<State<T>*> closeVec,State<T> *s) {
         for (const auto &state : closeVec) {
             if(s->equals(state))

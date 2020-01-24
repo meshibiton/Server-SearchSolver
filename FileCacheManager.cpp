@@ -37,7 +37,7 @@ bool FileCacheManager::isExitFile(string problem) {
 void FileCacheManager::pushSolution(string problem, string solution) {
     pthread_mutex_lock(&mutex);
     int nameFile = hashFunc(problem);
-    cout<<"kkkk"+to_string(nameFile)<<endl;
+  //  cout<<"kkkk"+to_string(nameFile)<<endl;
     //write to file
     std::ofstream outfile (to_string (nameFile)+".txt");
     outfile << solution << std::endl;

@@ -7,17 +7,14 @@
 
 int main(int argc, char *argv[]) {
     if(argc==2) {
-        //Server *server = new MySerialServer();
-//    StringReverser *stringReverser = new StringReverser();
+        //create object of all the details that exist in cache manager
         FileCacheManager *fileCacheManager = new FileCacheManager();
-
+        //get from the client the solution and save the information in class Fields
         MyClientHandler *myClientHandler = new MyClientHandler(new SearcherSolver(), fileCacheManager);
-//        myClientHandler->handlerClient(5600);
          Server *server = new MyParallelServer();
         //Server *server = new MySerialServer();
+        //server open the port for accepting client
         server->open(stoi(argv[1]), myClientHandler);
-        //  server->open(atoi(argv[1]), myClientHandler);
-//        this_thread::sleep_for(chrono::microseconds(100000));
     }
     return 0;
 

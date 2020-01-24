@@ -22,8 +22,6 @@ public:
 };
 
 
-
-
 template <class T>
 
 class MyPriorityQueue: public SearcherAbstract<T>  {
@@ -31,7 +29,6 @@ class MyPriorityQueue: public SearcherAbstract<T>  {
 protected:
     //// Syntax to create a min heap for priority queue
     //priority_queue <type, vector<type>, loading func for min >>
-
     priority_queue<State<T> *, vector<State<T> *>, comp<T>> openList;
 public:
     int openListSize() {
@@ -59,10 +56,7 @@ public:
         push(s);
     }
 
-
-
-
-    //------------overloud func of queue------------
+    //------------overload func of queue------------
     //push stat to the queue
     void push(State<T> *state) {
         openList.push(state);
@@ -78,8 +72,6 @@ public:
     //get the top state
     State<T> *top() {
 
-//        State<T> *firstState = top();
-//        return this->openList.pop();//
         State<T> *firstState = this->openList.top();
         return firstState;
     }
@@ -119,13 +111,7 @@ public:
         return returnState;
     }
 
-//    bool containInClose(vector<State<T>*> closeVec,State<T> *s) {
-//        for (const auto &state : closeVec) {
-//            if(closeVec == s)
-//                return true;
-//        }
-//        return false;
-//    }
+
     void replacePathIfShorter(vector<State<T>*> closeVec,State<T> *state) {
         for (const auto &oldState : closeVec) {
             if(oldState == state && (oldState->getCost() >= state->getCost()) ){
@@ -136,7 +122,6 @@ public:
             }
 
         }
-
     }
 
 
@@ -158,8 +143,6 @@ public:
             this->push(state);
         }
     }
-
-
 
 
 };

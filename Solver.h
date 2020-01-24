@@ -15,7 +15,7 @@ public:
 // Pure Virtual Function
     virtual string solve(Problem)= 0;
     virtual ~Solver(){}
-/* Other members */
+
 };
 
 #endif //FINALPROJECTPART2_SOLVER_H

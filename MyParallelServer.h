@@ -5,8 +5,6 @@
 #ifndef FINALPROJECTPART2_MYPARALLELSERVER_H
 #define FINALPROJECTPART2_MYPARALLELSERVER_H
 #include "Server.h"
-
-//#include "ClientHandler.h"
 #include <thread>
 #include <netinet/in.h>
 #include <iostream>

@@ -57,7 +57,7 @@ void MySerialServer::serverSide(int socketfd, ClientHandler *clientHandler) {
         tv.tv_sec = 120;
         tv.tv_usec = 0;
         setsockopt(socketfd, SOL_SOCKET, SO_RCVTIMEO, (const char *) &tv, sizeof tv);
-        //it time out occured
+        //it time out occur
 
         // accepting a client
         int client_socket = accept(socketfd, (struct sockaddr *) &address,
@@ -76,10 +76,9 @@ void MySerialServer::serverSide(int socketfd, ClientHandler *clientHandler) {
                 }
             }
         } else {
-            //we will send the client to handle the client we recieved
+            //we will send the client to handle the client we received
             clientHandler->handlerClient(client_socket);
         }
     }
-
 }
 

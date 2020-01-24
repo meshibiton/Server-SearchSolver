@@ -38,7 +38,6 @@ private:
     }
 
     void addOpenList(State<T> *s){
-//        this->evaluateNodes++;
         openList.push(s);
     }
 
@@ -76,14 +75,12 @@ public:
         //while there are nod in the queue continue
         while (this->openListSize() > 0) {
             this->addNumOfNodesEvaluated();
+            //take the first state from the queue
             State<T> *curState = this->popOpenList();
-//            pair<int,int> number=curState->getState();
-//            string pair="("+to_string(number.first)+","+to_string(number.second)+")";
-//            cout<<pair<<endl;
             if (searchable->isGoalState(curState)) {
                 return this->reversePath(curState, searchable->getInitialState());
             }
-            //return the all Neighbors
+            //input the all Neighbors
             vector<State<T>*> statesVec = searchable->getAllPossibleState(curState);
             for (State<T> *s : statesVec) {
                 //check if exist in the visited nod
@@ -93,16 +90,10 @@ public:
                     // add to the visted node vector
                     closeVec.push_back(s);
                 }
-
-
-
-//                if (!this->containInClose(closeVec, s) && !this->openContains(s)) {
-
-
             }
         }
         vector<State<T> *> emptyVec;
-        //there is not path
+        //there is not path return empty vecS
         return emptyVec;
     }
 

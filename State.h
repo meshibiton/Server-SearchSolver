@@ -20,6 +20,15 @@ public:
         this->cost=cost1;
         this->camefrom=came1;
     }
+    void setState(T state);
+
+    void setCost(double cost);
+
+    void setCamefrom(State<T> *camefrom);
+
+    double getCost() const;
+
+    State<T> *getCamefrom() const;
 
     T getState() const {
         return state;
@@ -28,23 +37,10 @@ public:
         return (getState() == s.getState());
     }
 
-
-
-
     bool equals(State<T> *state1){
         return this->state == state1->state;
     }
-    void setState(T state);
 
-    void setCost(double cost);
-
-
-
-    double getCost() const;
-
-    State<T> *getCamefrom() const;
-
-    void setCamefrom(State<T> *camefrom);
 };
 
 template<class T>

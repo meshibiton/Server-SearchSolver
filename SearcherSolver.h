@@ -18,27 +18,23 @@
 using namespace  std;
 //template <class T, class Solution>
 class SearcherSolver: public Solver<string,vector<vector<double >>>{
-private:
-  //  Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher;
-public:
-//    SearcherSolver() {
-//        //need func that will return the best algo,now its best
-//        this->searcher = new BestFirstSearcher<pair<int, int>>();
-////        this->searcher = new DFSSearcher<pair<int, int>>();
-//    }
 
+public:
 
     string solve(vector<vector<double >> problem) {
         //create the problem we want, this is for matrix problem
-//        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new BestFirstSearcher<pair<int, int>>();
-        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new BestFirstSearcher <pair<int, int>>();
+        Searcher<pair<int, int>, vector<State<pair<int, int> > *>> *searcher = new AStarSearcher <pair<int, int>>();
+        //create data base that contain all the details for solving the problem
         Searchable<pair<int, int>> *searchable = new Matrix(problem);
+        //after data Analysis of the four algorithms we find out that A*  running fastest of all
         vector<State<pair<int, int> > *> solution = searcher->search(searchable);
-        cout <<  searcher->getNumOfNodesEvaluated()<< endl;
+        //print the num of the node we visited will the algorithm run
+        cout <<"Total visited nodes: "+  to_string(searcher->getNumOfNodesEvaluated())<< endl;
         if (solution.size() == 0) {
             return "No path";
 
         }
+        //translate the vector state to string vec with information on the path of the algorithm
         string solutionString = FromVecToString(solution);
         return solutionString;
     }
