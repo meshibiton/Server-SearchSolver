@@ -1,0 +1,516 @@
+commit ba45d8c0f697d0ee6c5b9464ebe372dede90a989
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Fri Jan 24 11:40:59 2020 +0200
+
+    after adding finish comment and fixing compile warnings
+
+commit 80651bf013588c4d694d70b5a5311739fd8e9454
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Wed Jan 22 18:20:57 2020 +0200
+
+    a* is working
+
+commit 8a5d1fbe7c195399e611fb1ea41c7fad108c8b79
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Wed Jan 22 01:31:17 2020 +0200
+
+    created the best first search algo
+
+commit cfc36d2de43076e71b817972ee7fc9bb62cc580e
+Author: meshibiton <58934005+meshibiton@users.noreply.github.com>
+Date:   Mon Jan 20 16:56:53 2020 +0200
+
+    Update README.md
+
+commit f70e054b065060ce216c36a232105588c5ff2a8f
+Author: meshibiton <58934005+meshibiton@users.noreply.github.com>
+Date:   Mon Jan 20 16:52:44 2020 +0200
+
+    Update README.md
+
+commit bcb5492a93047e4b2dd4ef99800abddefbca07ff
+Author: meshibiton <58934005+meshibiton@users.noreply.github.com>
+Date:   Mon Jan 20 16:48:24 2020 +0200
+
+    Update README.md
+
+commit 89e1d5e66de02a2329b68aa2ad22ee1d4fe0de16
+Author: meshibiton <meshi19@gmail.com>
+Date:   Mon Jan 20 16:46:07 2020 +0200
+
+    new function in cachemanger -deal with getting file from direcctory
+    add another if -first check if in cache ,then in files
+    ,then solve.
+
+commit 3df7f5de745e102c0b7e5741f79f926ae66ec1e6
+Author: meshibiton <meshi19@gmail.com>
+Date:   Mon Jan 20 03:17:20 2020 +0200
+
+    update
+
+commit 3e504cd35698f549a74149b606683b40ac547fef
+Merge: 6942b50 d22dec1
+Author: meshibiton <meshi19@gmail.com>
+Date:   Mon Jan 20 02:23:56 2020 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 6942b50e1c364cc0a8a2e7b65286df50d2036813
+Author: meshibiton <meshi19@gmail.com>
+Date:   Mon Jan 20 02:23:16 2020 +0200
+
+    fix all compile error,warnings, and change few methods.
+    change My pareller and build his func.
+
+commit d22dec177f5faff0effc6e81caee403dfff6a781
+Author: meshibiton <58934005+meshibiton@users.noreply.github.com>
+Date:   Mon Jan 20 01:23:35 2020 +0200
+
+    Update README.md
+
+commit c0e18d709e35fe4bc24ff6eec6e864b4388a5b92
+Author: meshibiton <58934005+meshibiton@users.noreply.github.com>
+Date:   Mon Jan 20 01:21:17 2020 +0200
+
+    Update README.md
+
+commit 13abfec0eec6e0fdf57f0235e7b1fa981f31bfe7
+Author: meshibiton <58934005+meshibiton@users.noreply.github.com>
+Date:   Mon Jan 20 01:19:11 2020 +0200
+
+    Update README.md
+
+commit 5ba0428d9991bc6c7f00e5c5bd00aed0c683ab7e
+Author: meshibiton <58934005+meshibiton@users.noreply.github.com>
+Date:   Mon Jan 20 01:12:46 2020 +0200
+
+    Update README.md
+
+commit 3227d4512943389d652fe55d6b00cd6746de2c8b
+Author: meshibiton <58934005+meshibiton@users.noreply.github.com>
+Date:   Mon Jan 20 01:09:52 2020 +0200
+
+    Create README.md
+
+commit 7496adb68c32ec900c7d774f7dc8d6b694ac5484
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sun Jan 19 22:18:39 2020 +0200
+
+    created the best first search algo
+
+commit 69fc5e02258fcc1da40db7e3d761b23a3cf5b9ff
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sun Jan 19 21:18:20 2020 +0200
+
+    create mutex, checking parallel option
+
+commit 538d4558a6fc629aebc1a898e000ef2ed032dd83
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sun Jan 19 15:03:11 2020 +0200
+
+    created the best first search algo
+
+commit f8f32fb294ba0b875f56045d0f1593a8e4af73b1
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sun Jan 19 14:33:04 2020 +0200
+
+    created the best first search algo
+
+commit e525acfd44b5683ed0f04f165b7df83dfde2353b
+Author: meshibiton <meshi19@gmail.com>
+Date:   Sun Jan 19 14:15:14 2020 +0200
+
+    update
+
+commit 566c69cdb5077ce56c8d10bde0fd7ab093b2c6e6
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sun Jan 19 03:16:08 2020 +0200
+
+    created the best first search algo
+
+commit dda579abe72126e3de9e931618c9461ffec787e1
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sun Jan 19 02:20:52 2020 +0200
+
+    created the best first search algo
+
+commit 0245dfe8596e5eafc9491c5d8f639161324a5c14
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sun Jan 19 01:51:04 2020 +0200
+
+    created the best first search algo
+
+commit e50320e2dcc22e9b332435e2fe1248bd497a51f3
+Merge: d0526d4 e9aac39
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sun Jan 19 01:43:15 2020 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit d0526d4b5946b76a77e8460409971f2928185f79
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sun Jan 19 01:42:54 2020 +0200
+
+    created the best first search algo
+
+commit 494f8e35f299251659603ba4d93603aceec86c45
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sun Jan 19 01:40:32 2020 +0200
+
+    created the best first search algo
+
+commit e9aac397722bb49c1f93dbf44d73755d74c4d069
+Author: meshibiton <meshi19@gmail.com>
+Date:   Sun Jan 19 00:52:56 2020 +0200
+
+    change the if
+
+commit 54c909ca54e59f8c5d0cff4a816e4f620e61daa9
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sun Jan 19 00:51:26 2020 +0200
+
+    dfs has complited
+
+commit 43d6bda506d2d2214b001971ecd54d9f8665db00
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sun Jan 19 00:12:57 2020 +0200
+
+    created the best first search algo
+
+commit 71edfa6bed1f4d0476c1e3cbe9c8f5b0f9f403b8
+Author: meshibiton <meshi19@gmail.com>
+Date:   Sat Jan 18 23:48:37 2020 +0200
+
+    change read buffer and get nodes function
+
+commit 2b7f276e484658faa2862814c5cd535083a91037
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Sat Jan 18 19:14:41 2020 +0200
+
+    created the best first search algo
+
+commit 744570efdd693521f7afd205d6383b6ac62348ae
+Author: meshibiton <meshi19@gmail.com>
+Date:   Sat Jan 18 18:27:16 2020 +0200
+
+    fix segmantion
+
+commit fea9e8e540739d96f0e2d17345d497f03a2a7ce0
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Fri Jan 17 15:09:37 2020 +0200
+
+    created the best first search algo
+
+commit 38681aa2fc8be7234fd5bcfed7104cb5caa25087
+Author: meshibiton <meshi19@gmail.com>
+Date:   Fri Jan 17 12:44:23 2020 +0200
+
+    fix error
+
+commit ec281732050a2c90226836bb199ce02ddeff0cb8
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Fri Jan 17 02:53:39 2020 +0200
+
+    created the best first search algo
+
+commit 752b99375ede821fd83c5e7a6b8e313cbdc63463
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Fri Jan 17 02:38:14 2020 +0200
+
+    created the best first search algo
+
+commit 5bc651608205e3c4416c02540c1748e16956a061
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Fri Jan 17 02:18:53 2020 +0200
+
+    created the best first search algo 2 error left
+
+commit 047ad4779ce9f23d4cc95e35dd9c77d9a4415540
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Fri Jan 17 02:03:20 2020 +0200
+
+    created the best first search algo
+
+commit bf958f4a177de5ae428efcb683b118b49360784a
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Fri Jan 17 01:47:36 2020 +0200
+
+    created the best first search algo
+
+commit 625079b87aa3bdaa35bc6398765fb9fd17360573
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Fri Jan 17 01:45:00 2020 +0200
+
+    created the best first search algo
+
+commit 334ea70c5eff544b0bafd05eeee0695d38438b24
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Fri Jan 17 01:00:04 2020 +0200
+
+    created the best first search algo
+
+commit 8751a89b0ed621b1bcdec419e459d5730de1bfd2
+Author: meshibiton <meshi19@gmail.com>
+Date:   Thu Jan 16 21:06:15 2020 +0200
+
+    update
+
+commit afe6ccdd5da44e7a15d52c0635fe98fc99f1ff43
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Thu Jan 16 17:16:21 2020 +0200
+
+    creat the best first search algo
+
+commit e0de7297935a4b026a1127e278152a17f2d35060
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Thu Jan 16 17:06:56 2020 +0200
+
+    creat the best first search algo
+
+commit 6aae16c0a093f9af76b52ef43dfe700d5706cfb3
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Thu Jan 16 17:05:06 2020 +0200
+
+    creat the best first search algo
+
+commit c20adbb5f5e4565cc23c7b29f2c76d7fb8d07f96
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Thu Jan 16 17:04:22 2020 +0200
+
+    creat the best first search algo
+
+commit 33ca5b8ded734fdb367db95aad1b0bbd918698f4
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Thu Jan 16 17:02:49 2020 +0200
+
+    creat the best first search algo
+
+commit 94e5667d18b35ad13504304c497babff4dd54976
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Thu Jan 16 16:51:23 2020 +0200
+
+    creat the best first search algo
+
+commit 6ba1c7aac56014afcf0f075bcb629bc0035f9257
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Thu Jan 16 16:42:57 2020 +0200
+
+    creat the best first search algo
+
+commit c8db3ec5d276d428c77f7bc47de636956e6b18e8
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Thu Jan 16 16:38:31 2020 +0200
+
+    creat the best first search algo
+
+commit e45f0fefb12aea28eadcb2fc7d36569d30842e88
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Thu Jan 16 14:52:16 2020 +0200
+
+    creat the best first search algo
+
+commit 8b9e9e36acb62f59c1199dd7269d3a2a24c29f87
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Thu Jan 16 14:44:25 2020 +0200
+
+    creat the best first search algo
+
+commit f3f604189ad6d41fdf8e18daa9db697f5f18f8fd
+Author: meshibiton <meshi19@gmail.com>
+Date:   Thu Jan 16 00:33:15 2020 +0200
+
+    new functions
+
+commit f761486b7c3e2fbf21b586ebb519564163d0aa02
+Author: meshibiton <meshi19@gmail.com>
+Date:   Thu Jan 16 00:31:06 2020 +0200
+
+    new functions
+
+commit 550bea3433a82fde4a7e78caaad927f42fd1d4d0
+Author: meshibiton <meshi19@gmail.com>
+Date:   Thu Jan 16 00:30:29 2020 +0200
+
+    new functions
+
+commit 9b5e0a62045d570e7e58aadd05f7d728cf6e22a9
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Thu Jan 16 00:23:46 2020 +0200
+
+    creat the best first search algo
+
+commit 0ebd3fe2974542c34a8ca601b575da06373e3334
+Author: meshibiton <meshi19@gmail.com>
+Date:   Wed Jan 15 23:51:15 2020 +0200
+
+    new functions
+
+commit de3f976f60c45d57aaa5d9302f9863b035e805ec
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Wed Jan 15 19:35:41 2020 +0200
+
+    start part 3
+
+commit 75ae7e55c9bfee2b4231ce657a86b8a1781e3455
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Wed Jan 15 19:28:19 2020 +0200
+
+    start part 3
+
+commit d3b874ca875eaa5b6bdefd975d36cb626f8094ea
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Wed Jan 15 18:59:16 2020 +0200
+
+    start part 3
+
+commit 2cb7a8c631707db5d0a30538546aca8e34fb61c1
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Wed Jan 15 01:08:54 2020 +0200
+
+    start part 3
+
+commit ef754a870e270343670e8d94200c7bb2309bc960
+Author: meshibiton <meshi19@gmail.com>
+Date:   Wed Jan 15 01:01:23 2020 +0200
+
+    new classes matrix
+
+commit c1cd26696c66fd2f59d0c9c8e2489eec376cbdd1
+Author: meshibiton <meshi19@gmail.com>
+Date:   Wed Jan 15 00:10:33 2020 +0200
+
+    new classes part 3
+
+commit 314508b9b1472e9fcb69ad9bc13f7c21566813fa
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Tue Jan 14 17:49:54 2020 +0200
+
+    part 2
+
+commit 6334421c08078db5100c45bb193058400a361502
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Tue Jan 14 00:53:14 2020 +0200
+
+    e
+
+commit 97cb3b2b613b4329ee6eaa8b851701a6f7502846
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Tue Jan 14 00:51:58 2020 +0200
+
+    e
+
+commit d25e98eea1af6b706929ebd0b9b82153b84484c9
+Author: meshibiton <meshi19@gmail.com>
+Date:   Tue Jan 14 00:48:19 2020 +0200
+
+    change classes
+
+commit d9b3973cc7625f3fd0ce271f8614f2c95f777185
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Mon Jan 13 23:46:54 2020 +0200
+
+    update
+
+commit c33c72add09a00196ed1005f93b2cbf8fcb86cb7
+Merge: ac1891a 7e16f3a
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Mon Jan 13 23:43:17 2020 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ac1891a4dffd1a409f7c4aff4e6ba394342eae75
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Mon Jan 13 23:41:26 2020 +0200
+
+    update
+
+commit 7e16f3a5f5a33198eecff0be2c9bf960b542b07c
+Author: meshibiton <meshi19@gmail.com>
+Date:   Mon Jan 13 23:39:10 2020 +0200
+
+    new classes and interface
+
+commit 799614c12210039a28da31c8850fcb7a33eb470e
+Author: meshibiton <meshi19@gmail.com>
+Date:   Mon Jan 13 18:46:49 2020 +0200
+
+    update
+
+commit d45ee62e674d8ee19146ec9e1f6f7d2e1ea41067
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Mon Jan 13 18:45:39 2020 +0200
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       MySerialServer.h
+
+commit f5f3af2ae2469711fa9b8b1d3455734b055e53c6
+Author: meshibiton <meshi19@gmail.com>
+Date:   Mon Jan 13 02:35:45 2020 +0200
+
+    new classes and interface
+
+commit b179de15190363604f815402947da27014f8bec2
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Mon Jan 13 02:27:47 2020 +0200
+
+    update
+
+commit c77cbe5d086b3318f583110c6bd991dafc31dae4
+Merge: c4ef69f 0e9808a
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Mon Jan 13 02:26:16 2020 +0200
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       MySerialServer.h
+
+commit c4ef69faaa9b4ce9c39b027a7167a3b27baaf4a1
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Mon Jan 13 02:22:51 2020 +0200
+
+    new class
+
+commit 0e9808aca41baec0f7dfd18c15610c59033271d6
+Author: meshibiton <meshi19@gmail.com>
+Date:   Mon Jan 13 02:17:33 2020 +0200
+
+    update
+
+commit b507b644eb93ddc4891e073be9fdda899f78dfe8
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Mon Jan 13 01:48:28 2020 +0200
+
+    new interface
+
+commit 526b0c967079cfb4890c488a18fd0e8c0a770660
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Mon Jan 13 01:47:06 2020 +0200
+
+    start work on the project
+
+commit 1bcce4dae216e6b34d9bf2c0c5c6796bd24bc873
+Author: meshibiton <meshi19@gmail.com>
+Date:   Mon Jan 13 01:45:36 2020 +0200
+
+    new classes and interface
+
+commit 7b8611f3fcb58745912c6db70207d5ff5b85b76a
+Author: raph <raphaelhouri789@gmail.com>
+Date:   Mon Jan 13 01:04:12 2020 +0200
+
+    start work on the project
+
+commit b0dd1bcc3a6036a41c3edff48312cb737251c3cf
+Author: meshibiton <meshi19@gmail.com>
+Date:   Mon Jan 13 00:58:09 2020 +0200
+
+    first time up
+
+commit 97dce00ac91f4ced221d4adced435c9d431e90cc
+Author: meshibiton <meshi19@gmail.com>
+Date:   Mon Jan 13 00:57:11 2020 +0200
+
+    first time up

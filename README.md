@@ -16,7 +16,8 @@ The algorithm examines and print the cost of the path he chosed,the number of ve
 he passed and the path itself(DOWN/UP/RIGHT/LEFT).
 
 ## Graph - analyzes run time algo
-![Example screenshot](./img/fly2.jpeg)
+see -pdf "results".
+The optimal algo that was chosen is Astar.
 
 ## Setup 
 
